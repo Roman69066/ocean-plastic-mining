@@ -1,0 +1,4 @@
+{
+  "records": "data/challenges.json",
+  "translations": "locales/{locale}/content.json#challenges"
+}

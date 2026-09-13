@@ -1,0 +1,22 @@
+Input or output,Value,Unit,Source / allocation / uncertainty
+Initial CAPEX,,EUR,Unknown — supply your evidence; no default value
+Life,,years,Unknown — supply your evidence; no default value
+Discount rate,,percent,Unknown — supply your evidence; no default value
+Residual OPEX,,EUR/year,Unknown — supply your evidence; no default value
+Search,,EUR/year,Unknown — supply your evidence; no default value
+Energy,,EUR/year,Unknown — supply your evidence; no default value
+Logistics,,EUR/year,Unknown — supply your evidence; no default value
+Maintenance,,EUR/year,Unknown — supply your evidence; no default value
+Processing,,EUR/year,Unknown — supply your evidence; no default value
+Disposal,,EUR/year,Unknown — supply your evidence; no default value
+Compliance,,EUR/year,Unknown — supply your evidence; no default value
+Verified dry permanent removal,,tonnes/year,Unknown — supply your evidence; no default value
+Resource revenue,,EUR/year,Unknown — supply your evidence; no default value
+Public payment,,EUR/year,Unknown — supply your evidence; no default value
+Annualized capital,"=IF(COUNT(B2:B4)<3,""Unknown"",IF(OR(B2<0,B3<=0,B4<0,B4>100),""Invalid"",IF(B4=0,B2/B3,B2*(B4/100)/(1-(1+B4/100)^(-B3)))))",EUR/year,Model only
+Operating cost,"=IF(COUNT(B5:B12)<8,""Unknown"",IF(MIN(B5:B12)<0,""Invalid"",SUM(B5:B12)))",EUR/year,Exclusive allocation required
+Full annual cost,"=IF(COUNT(B16:B17)<2,""Unknown"",SUM(B16:B17))",EUR/year,Model only
+Gross LCOCR,"=IF(COUNT(B13,B18)<2,""Unknown"",IF(B13<=0,""Invalid"",B18/B13))",EUR/tonne,No revenue subtraction
+T1 operating balance,"=IF(COUNT(B14:B15,B17)<3,""Unknown"",SUM(B14:B15)-B17)",EUR/year,Not verified viability
+T1 full-cost balance,"=IF(COUNT(B14:B15,B18)<3,""Unknown"",SUM(B14:B15)-B18)",EUR/year,Not verified viability
+T2 balance,"=IF(COUNT(B14,B18)<2,""Unknown"",B14-B18)",EUR/year,Not verified viability

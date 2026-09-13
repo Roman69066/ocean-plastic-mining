@@ -1,0 +1,4 @@
+{
+  "records": "data/evidence.json",
+  "policy": "docs/methodology/verification.md"
+}

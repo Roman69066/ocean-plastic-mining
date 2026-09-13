@@ -1,0 +1,25 @@
+name: Checks
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci
+      - run: npm run lint
+      - run: npm run typecheck
+      - run: npm test
+      - run: npm run build
+      - run: npx playwright install --with-deps chromium
+      - name: Route and browser checks
+        run: |
+          npm start > /tmp/opm-server.log 2>&1 &
+          for i in $(seq 1 30); do curl -sf http://localhost:3100/en/ > /dev/null && break; sleep 1; done
+          npm run test:routes
+          npm run test:browser

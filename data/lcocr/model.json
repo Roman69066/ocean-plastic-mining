@@ -1,0 +1,19 @@
+{
+  "version": "0.1-draft",
+  "currency": "EUR",
+  "priceYear": null,
+  "verifiedCost": null,
+  "costBuckets": [
+    "opex",
+    "search",
+    "energy",
+    "logistics",
+    "maintenance",
+    "processing",
+    "disposal",
+    "compliance"
+  ],
+  "denominator": "verified dry tonnes permanently removed per year",
+  "defaultInputs": null,
+  "revenueNetsCost": false
+}

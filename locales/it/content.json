@@ -1,0 +1,526 @@
+{
+  "meta": {
+    "title": "Progetto di Estrazione della Plastica Oceanica",
+    "description": "Ridurre il costo della rimozione permanente finché molti gruppi indipendenti possano partecipare. Partire da un modello verificabile."
+  },
+  "nav": [
+    "Panoramica",
+    "Tesi",
+    "Modello dei costi",
+    "Sfide",
+    "Evidenze",
+    "Soluzioni",
+    "Classifica",
+    "Kit iniziale",
+    "Contribuisci",
+    "Metodologia",
+    "Governance",
+    "Informazioni"
+  ],
+  "ui": {
+    "project": "Progetto di Estrazione della Plastica Oceanica",
+    "short": "INGEGNERIA OCEANICA APERTA",
+    "research": "Ricerca / non ancora validato",
+    "review": "Revisione della comunità necessaria",
+    "language": "Lingua",
+    "menu": "Navigazione",
+    "skip": "Vai al contenuto",
+    "open": "Aperto",
+    "all": "Tutte le sfide",
+    "explore": "Esplora le sfide",
+    "model": "Vedi il modello dei costi",
+    "github": "Contribuisci su GitHub",
+    "updated": "Aggiornato",
+    "target": "Metrica obiettivo",
+    "evidence": "Livello di evidenza",
+    "unknown": "Sconosciuto",
+    "empty": "Nessun dato ancora inviato.",
+    "source": "Fonti",
+    "status": "Stato",
+    "category": "Disciplina",
+    "problem": "Domanda ingegneristica",
+    "why": "Perché conta",
+    "facts": "Fatti noti",
+    "assumptions": "Ipotesi da verificare",
+    "questions": "Domande aperte",
+    "datasets": "Dataset",
+    "submissions": "Contributi",
+    "maintainers": "Responsabili",
+    "unassigned": "Si cerca un responsabile",
+    "submit": "Invia un contributo",
+    "download": "Scarica",
+    "hypothetical": "Ipotetico · non misurato",
+    "notVerified": "Non ancora verificato",
+    "current": "Costo attualmente verificato",
+    "unit": "€/t rimossa permanentemente",
+    "back": "Tutte le sfide",
+    "noSources": "Nessuna evidenza di supporto inviata.",
+    "reviewNote": "Le traduzioni iniziali sono aperte alle correzioni. Non viene dichiarata alcuna revisione umana.",
+    "repoPending": "Il repository pubblico GitHub non è ancora collegato. Scarica guide e modelli; i link di invio si attiveranno dopo la configurazione.",
+    "footer": "Misura. Verifica. Riduci il costo.",
+    "draft": "Bozza metodologica · RFC da esaminare",
+    "noData": "Sconosciuto è una risposta valida.",
+    "fullCost": "Costo annuo completo",
+    "operatingCost": "Costo operativo annuo",
+    "tonnes": "Tonnellate secche verificate / anno",
+    "calculate": "Calcola scenario",
+    "reset": "Cancella input",
+    "modelOnly": "Solo modello: gli input non sono dati verificati.",
+    "invalid": "Compila tutti i campi: valori finiti non negativi, vita utile e tonnellate positive, tasso tra 0 e 100%.",
+    "annualCapex": "CAPEX annualizzato",
+    "capex": "CAPEX iniziale (€)",
+    "lifetime": "Vita utile (anni)",
+    "rate": "Tasso di sconto (%)",
+    "resourceRevenue": "Ricavi da risorse (€/anno)",
+    "publicPayment": "Pagamento pubblico (€/anno)",
+    "inputHint": "Importi annui in EUR, tranne capitale iniziale, vita, tasso e tonnellate. 0 indica uno zero noto; vuoto significa sconosciuto.",
+    "outputHint": "Il LCOCR lordo non sottrae ricavi o pagamenti pubblici. Nessuno scenario predefinito viene presentato come prestazione reale.",
+    "t1Operating": "Saldo operativo T1",
+    "t1Full": "Saldo a costo completo T1",
+    "t2Balance": "Saldo a costo completo T2",
+    "rank": "Posizione",
+    "team": "Squadra",
+    "solution": "Soluzione",
+    "location": "Luogo",
+    "duration": "Durata della prova",
+    "removed": "Tonnellate rimosse",
+    "verification": "Verifica",
+    "search": "Cerca sfide",
+    "allCategories": "Tutte le discipline",
+    "noResults": "Nessuna sfida corrispondente.",
+    "scope": "Ambito",
+    "next": "Prossima domanda",
+    "readGuide": "Leggi la guida ai contributi"
+  },
+  "home": {
+    "eyebrow": "UNA DOMANDA INGEGNERISTICA APERTA",
+    "title": "Possiamo rendere la pulizia oceanica",
+    "emphasis": "10 volte meno costosa?",
+    "subtitle": "Ridurre il costo della rimozione permanente finché molti gruppi indipendenti possano partecipare. Partire da un modello verificabile.",
+    "north": "UNA SOLA METRICA GUIDA",
+    "northText": "Costo per tonnellata rimossa permanentemente. Intero ciclo di vita. Evidenze verificabili.",
+    "milestone": "Una curva dei costi, senza conto alla rovescia.",
+    "t1": "Sostenibilità con pagamenti pubblici",
+    "t2": "Sostenibilità commerciale senza sussidi",
+    "cleanup": "La plastica è un onere.",
+    "cleanupQuestion": "Chi paga per rimuoverla?",
+    "mining": "La plastica è una risorsa a basso tenore.",
+    "miningQuestion": "Quanto può scendere il costo di estrazione?",
+    "metaphor": "«Mining» è una metafora economica e ingegneristica. Non implica redditività né che la pirolisi sia la via migliore.",
+    "shift": "Una diversa domanda ingegneristica.",
+    "pioneers": "Dalla possibilità alla ripetibilità.",
+    "pioneersText": "The Ocean Cleanup ha svolto un’ampia esplorazione ingegneristica della raccolta offshore. Il costo completo può scendere abbastanza da consentire a team indipendenti di replicarla?",
+    "analogy": "NASA → SpaceX è un’analogia strategica: esplorazione, industrializzazione, standardizzazione e riuso. Non dimostra che la pulizia oceanica seguirà lo stesso percorso.",
+    "frontier": "La prossima frontiera è capire quanto possa costare poco la rimozione permanente.",
+    "challenges": "Dieci incognite. Aperte a tutti.",
+    "challengeText": "Porta un calcolo, un dataset, una prova o un’obiezione documentata.",
+    "principle": "Affermazioni ingegneristiche straordinarie richiedono evidenze verificabili.",
+    "principleText": "Le ipotesi centrali possono essere sbagliate. Anche gli esperimenti falliti fanno parte del registro.",
+    "breakTitle": "Non limitarti a sostenere l’idea.",
+    "breakEmphasis": "Prova a confutarla.",
+    "breakText": "Trova errori. Invia evidenze. Migliora il modello. Crea un esperimento indipendente.",
+    "last": "L’oceano non ha bisogno di un’altra promessa. Ha bisogno di una curva dei costi misurabile."
+  },
+  "pages": {
+    "thesis": {
+      "title": "La tesi è una domanda.",
+      "intro": "Automazione, standardizzazione, recupero energetico e logistica condivisa possono abbattere il costo completo?",
+      "sections": [
+        [
+          "Prima il denominatore",
+          "Contare solo rimozione permanente verificata. Escludere perdite, scarti e destinazioni finali non verificate."
+        ],
+        [
+          "Verificare la transizione",
+          "I fondi pubblici possono avviare esperimenti. Team, servizi condivisi e uscita dai sussidi restano ipotesi, non previsioni."
+        ],
+        [
+          "Infrastruttura aperta",
+          "Pubblicare modelli, ipotesi, prove e fallimenti per confrontare approcci e continuare senza dipendere dal fondatore."
+        ],
+        [
+          "Tenore sconosciuto",
+          "La plastica dispersa e contaminata richiede distribuzioni di densità operativa; la massa regionale totale non basta."
+        ]
+      ]
+    },
+    "cost": {
+      "title": "Il costo è la sfida.",
+      "intro": "Conta il costo per tonnellata rimossa permanentemente, non le dimensioni della nave o i fondi raccolti.",
+      "sections": [
+        [
+          "Un perimetro completo",
+          "Capitale annualizzato e tutti i costi annuali divisi per le tonnellate di rimozione permanente verificata."
+        ],
+        [
+          "Nessuna base verificata",
+          "La curva è concettuale, senza date o asse numerico. Non stima costi di organizzazioni esistenti."
+        ]
+      ]
+    },
+    "challenges": {
+      "title": "Sfide ingegneristiche aperte.",
+      "intro": "Dieci domande circoscritte, metriche comparabili e nessuna tecnologia preferita. Tutte iniziano come ipotesi."
+    },
+    "evidence": {
+      "title": "Mostrare le evidenze.",
+      "intro": "Qualità delle prove e direzione della conclusione sono distinte. E5 può sostenere o confutare; E0 resta un’ipotesi.",
+      "sections": [
+        [
+          "Un’ipotesi centrale del progetto era sbagliata.",
+          "Questa frase deve poter essere pubblicata quando giustificata. Non è ancora registrata una confutazione affidabile."
+        ],
+        [
+          "Registrare i fallimenti",
+          "Conservare risultati nulli, effetti avversi e prove contrastanti. Spiegare le revisioni senza cancellare la storia."
+        ]
+      ]
+    },
+    "solutions": {
+      "title": "Lasciare decidere evidenze e costi.",
+      "intro": "Direzioni di ricerca concorrenti, non team operativi o sistemi validati."
+    },
+    "leaderboard": {
+      "title": "Una classifica che merita i suoi numeri.",
+      "intro": "Nessuna soluzione ha ancora superato la soglia di verifica.",
+      "sections": [
+        [
+          "Criterio di ammissione",
+          "La bozza richiede E5 o E6, costi verificabili, massa secca e destinazione tracciabili, luogo, durata e audit indipendente. E5 non equivale a replica indipendente."
+        ],
+        [
+          "Confronti coerenti",
+          "Separare livelli di evidenza, dichiarare incertezza, anno dei prezzi e condizioni. E1 ed E5 non sono equivalenti."
+        ]
+      ]
+    },
+    "starter-kit": {
+      "title": "Iniziare da qualcosa di verificabile.",
+      "intro": "Scarica modelli reali e sostituisci le incognite con evidenze. Hardware e protocolli operativi non sono ancora disponibili."
+    },
+    "contribute": {
+      "title": "Come vuoi contribuire?",
+      "intro": "Una correzione può valere più di un sostegno. Parti da una domanda circoscritta e documenti controllabili."
+    },
+    "methodology": {
+      "title": "Definire il perimetro. Poi misurare.",
+      "intro": "LCOCR: costo livellato di pulizia e recupero oceanico. La versione 0.1 è una proposta in attesa di RFC.",
+      "sections": [
+        [
+          "Rimozione permanente",
+          "Verificare massa secca, catena di custodia e destinazione, sottraendo perdite. Il recupero energetico non è stoccaggio permanente di carbonio; riportare emissioni e residui."
+        ],
+        [
+          "Evitare doppie contabilizzazioni",
+          "OPEX comprende solo costi residui. Ricerca, energia, logistica, manutenzione, trattamento, smaltimento e conformità sono voci esclusive."
+        ],
+        [
+          "Capitale e incertezza",
+          "Usare il fattore di recupero del capitale. Dichiarare vita, tasso, anno dei prezzi, utilizzo, allocazioni ed errori. Vuoto non significa zero."
+        ],
+        [
+          "Due perimetri per T1",
+          "Il limite operativo confronta ricavi più pagamenti pubblici con i costi operativi. La home include anche il capitale. Riportare entrambi."
+        ],
+        [
+          "T2: uscita dai sussidi",
+          "Ricavi da risorse ≥ costo completo, inclusi capitale, trattamento, smaltimento e rischi. Ancora da verificare."
+        ],
+        [
+          "T3: ricerca futura",
+          "Costo abitativo offshore a lungo termine < abitare a terra + rotazione + trasporti. Non è un obiettivo operativo V1."
+        ]
+      ]
+    },
+    "governance": {
+      "title": "Un progetto che sopravvive al fondatore.",
+      "intro": "La responsabilità segue contributi continuativi e affidabili. Il fondatore non mantiene un’autorità suprema permanente.",
+      "sections": [
+        [
+          "Fondatore / Steward",
+          "Coordina inizialmente direzione, proposta metodologica e comunità; può poi assumere un ruolo consultivo."
+        ],
+        [
+          "Responsabili di disciplina",
+          "Servono responsabili per mare, energia, telerilevamento, costi, dati, web e traduzioni. Ruoli ancora vacanti."
+        ],
+        [
+          "Successione",
+          "Candidatura pubblica documentata, 14 giorni di discussione e voto di due terzi dei responsabili attivi. Procedure per inattività e conflitti."
+        ],
+        [
+          "Decisioni RFC",
+          "Modifiche a LCOCR, evidenza, valutazioni, perimetri, governance, licenze e standard richiedono RFC pubblico. RFC-0001 è ancora proposto."
+        ]
+      ]
+    },
+    "about": {
+      "title": "Una domanda aperta. Un registro pubblico.",
+      "intro": "Nome provvisorio. Stato: ricerca / non ancora validato.",
+      "sections": [
+        [
+          "Cosa non è questo progetto",
+          "Non è raccolta fondi, azienda di pulizia, città galleggiante, business redditizio dimostrato, obbligo di pirolisi, opposizione alle organizzazioni esistenti o ricerca di prove per una conclusione prefissata."
+        ],
+        [
+          "Sicurezza e responsabilità",
+          "Mare, navi, macchinari, autonomia, combustibili e alte temperature richiedono revisione competente. I progetti pubblici non autorizzano l’impiego. Rispettare requisiti marittimi, ambientali, di classe, attrezzature e impatto applicabili."
+        ],
+        [
+          "Privacy e apertura",
+          "Nessun account, pagamento o tracciamento tra siti. Lingua locale. Il contatore facoltativo salva hash di ID casuali e cookie proprietari, senza IP o percorsi. Codice Apache-2.0; contenuto originale CC BY 4.0; licenze di terzi invariate."
+        ]
+      ]
+    }
+  },
+  "labels": {
+    "supported": "Supportato",
+    "uncertain": "Incerto",
+    "rejected": "Confutato",
+    "supportedEmpty": "Nessun dato di supporto ancora revisionato.",
+    "rejectedEmpty": "Nessuna affermazione confutata con prove affidabili.",
+    "E0": "Ipotesi",
+    "E1": "Stima approssimativa",
+    "E2": "Modello analitico",
+    "E3": "Evidenza di laboratorio",
+    "E4": "Prova sul campo controllata",
+    "E5": "Evidenza operativa",
+    "E6": "Replica indipendente",
+    "oceanography": "Oceanografia",
+    "logistics": "Logistica",
+    "robotics": "Autonomia e robotica",
+    "remoteSensing": "Telerilevamento",
+    "marine": "Ingegneria marina",
+    "energy": "Energia e materiali",
+    "economics": "Economia ingegneristica"
+  },
+  "costLabels": {
+    "opex": "OPEX residuo",
+    "search": "Ricerca (esclusa energia contabilizzata a parte)",
+    "energy": "Energia",
+    "logistics": "Logistica",
+    "maintenance": "Manutenzione",
+    "processing": "Trattamento",
+    "disposal": "Smaltimento",
+    "compliance": "Conformità normativa"
+  },
+  "assumptions": [
+    "Il combustibile recuperato può alimentare la raccolta.",
+    "La pirolisi è la migliore via di recupero.",
+    "La plastica oceanica è già estraibile con profitto.",
+    "I pagamenti pubblici possono sostenere T1.",
+    "La scala riduce molto il costo unitario.",
+    "Emergerà un’industria logistica offshore condivisa.",
+    "Seguiranno insediamenti offshore permanenti.",
+    "È noto il costo completo €/t di un’organizzazione esistente.",
+    "I crediti di carbonio si applicano alla rimozione di plastica."
+  ],
+  "solutionTexts": [
+    [
+      "Grande intercepteur",
+      "Valutare efficienza rispetto a nave, resistenza e logistica."
+    ],
+    [
+      "Piccola nave autonoma",
+      "Verificare affidabilità, comunicazioni, recupero e ciclo di vita."
+    ],
+    [
+      "Interceptor a vela",
+      "Misurare disponibilità meteo e risparmio reale."
+    ],
+    [
+      "Nave madre e sciame",
+      "Confrontare supporto per 1, 10, 50 e 100 unità."
+    ],
+    [
+      "Raccolta passiva",
+      "Misurare ritenzione, deriva, catture accidentali e recupero."
+    ],
+    [
+      "Approccio ibrido",
+      "Pubblicare interfacce e allocazione dei costi condivisi."
+    ]
+  ],
+  "contributions": [
+    [
+      "Trovare un errore",
+      "Correggere modello, dato o argomento."
+    ],
+    [
+      "Inviare evidenze",
+      "Fornire pubblicazioni, dati o prove riproducibili."
+    ],
+    [
+      "Risolvere una sfida",
+      "Rispondere con metriche comparabili."
+    ],
+    [
+      "Migliorare il modello",
+      "Verificare perimetri, allocazioni e incertezza."
+    ],
+    [
+      "Costruire hardware",
+      "Documentare prototipo e revisione competente della sicurezza."
+    ],
+    [
+      "Tradurre",
+      "Revisionare una delle sette lingue."
+    ],
+    [
+      "Mantenere",
+      "Assumere responsabilità continuativa in un settore."
+    ]
+  ],
+  "kit": [
+    "Modello dei costi (CSV)",
+    "Modello di sfida",
+    "Modello di evidenza",
+    "Modello di dataset",
+    "Modello di prova sul campo",
+    "Lista di sicurezza — segnaposto",
+    "Guida ai contributi",
+    "Guida alla traduzione",
+    "Modello RFC"
+  ],
+  "translation": {
+    "status": "community-review-needed",
+    "reviewedBy": [],
+    "lastReviewedDate": null,
+    "sourceLanguage": "en"
+  },
+  "challenges": {
+    "CH-001": {
+      "title": "Densità della plastica oceanica",
+      "summary": "Quanti kg per km², ora di navigazione e ora effettiva di cattura offre un’area operabile?",
+      "problem": "Quanti kg per km², ora di navigazione e ora effettiva di cattura offre un’area operabile?",
+      "whyItMatters": "Usare distribuzioni di densità, non la massa totale regionale.",
+      "assumptions": [
+        "La densità accessibile può differire dalla media."
+      ],
+      "openQuestions": [
+        "Come influiscono stagione, meteo, profondità e selettività?"
+      ]
+    },
+    "CH-002": {
+      "title": "Limite energetico della logistica",
+      "summary": "Qual è l’energia minima per muovere, catturare, stoccare e trasportare una tonnellata anche con plastica gratuita accanto al collettore?",
+      "problem": "Qual è l’energia minima per muovere, catturare, stoccare e trasportare una tonnellata anche con plastica gratuita accanto al collettore?",
+      "whyItMatters": "Identificare un limite fisico non eliminabile dal software.",
+      "assumptions": [
+        "Trasferimenti, ritorni e mantenimento della posizione possono dominare."
+      ],
+      "openQuestions": [
+        "Quale limite resta valido con onde e utilizzo reali?"
+      ]
+    },
+    "CH-003": {
+      "title": "Interceptor autonomo economico",
+      "summary": "Come minimizzare il costo di ciclo di vita per tonnellata permanente con un’unità autonoma?",
+      "problem": "Come minimizzare il costo di ciclo di vita per tonnellata permanente con un’unità autonoma?",
+      "whyItMatters": "La cattura massima non dimostra il minimo costo completo.",
+      "assumptions": [
+        "Meno equipaggio può significare più recupero e manutenzione."
+      ],
+      "openQuestions": [
+        "Quali affidabilità e intervalli di servizio sono competitivi?"
+      ]
+    },
+    "CH-004": {
+      "title": "Rilevamento satellitare della plastica",
+      "summary": "Con quale risoluzione, meteo e confidenza si riduce la navigazione di ricerca inutile?",
+      "problem": "Con quale risoluzione, meteo e confidenza si riduce la navigazione di ricerca inutile?",
+      "whyItMatters": "Distinguere teoria, laboratorio, dati commerciali e verifica in mare.",
+      "assumptions": [
+        "Un segnale superficiale può non essere plastica raccoglibile."
+      ],
+      "openQuestions": [
+        "Quali precisione, richiamo, rivisita e costo per ora evitata?"
+      ]
+    },
+    "CH-005": {
+      "title": "Ricerca locale con droni",
+      "summary": "La ricognizione intorno alla nave riduce energia e tempo di ricerca per tonnellata?",
+      "problem": "La ricognizione intorno alla nave riduce energia e tempo di ricerca per tonnellata?",
+      "whyItMatters": "Sottrarre volo, recupero e trattamento dati dal beneficio.",
+      "assumptions": [
+        "Il vantaggio può limitarsi a certe condizioni."
+      ],
+      "openQuestions": [
+        "Quali autonomia, finestre meteo e falsi positivi sono utili?"
+      ]
+    },
+    "CH-006": {
+      "title": "Resistenza dell’intercettazione",
+      "summary": "Quale resistenza producono i sistemi con correnti e mare reali?",
+      "problem": "Quale resistenza producono i sistemi con correnti e mare reali?",
+      "whyItMatters": "Tradurre forza in potenza, combustibile e €/t.",
+      "assumptions": [
+        "Le prove in vasca possono non descrivere sistemi carichi offshore."
+      ],
+      "openQuestions": [
+        "Come incidono onde, carico, incrostazioni e geometria?"
+      ]
+    },
+    "CH-007": {
+      "title": "Energia netta della pirolisi",
+      "summary": "Quanta energia netta utilizzabile resta da plastica marina invecchiata, contaminata, salata e bagnata?",
+      "problem": "Quanta energia netta utilizzabile resta da plastica marina invecchiata, contaminata, salata e bagnata?",
+      "whyItMatters": "Includere essiccazione, selezione, preriscaldamento, reazione, pulizia, ausiliari, residui e fermate.",
+      "assumptions": [
+        "Il potere calorifico ideale può sovrastimare il risultato netto."
+      ],
+      "openQuestions": [
+        "Si può chiudere un bilancio misurato con emissioni e disponibilità reale?"
+      ]
+    },
+    "CH-008": {
+      "title": "Nave madre e sciame",
+      "summary": "Un supporto condiviso con piccoli collettori riduce €/t rispetto a un sistema grande?",
+      "problem": "Un supporto condiviso con piccoli collettori riduce €/t rispetto a un sistema grande?",
+      "whyItMatters": "Confrontare 1, 10, 50 e 100 unità con gli stessi confini.",
+      "assumptions": [
+        "Il coordinamento può annullare i risparmi."
+      ],
+      "openQuestions": [
+        "Come incidono code, guasti correlati e meteo?"
+      ]
+    },
+    "CH-009": {
+      "title": "Economia della manutenzione offshore",
+      "summary": "Quanto risparmiano 1, 10, 100 o 1000 team condividendo riparazioni, rifornimenti, depositi, trasporto, trattamento e dati?",
+      "problem": "Quanto risparmiano 1, 10, 100 o 1000 team condividendo riparazioni, rifornimenti, depositi, trasporto, trattamento e dati?",
+      "whyItMatters": "Verificare economie di scala senza presumerle.",
+      "assumptions": [
+        "Una maggiore domanda può generare congestione."
+      ],
+      "openQuestions": [
+        "Quali domanda, distanze e affidabilità consentono il pareggio?"
+      ]
+    },
+    "CH-010": {
+      "title": "Base di riferimento LCOCR",
+      "summary": "Come costruire un costo livellato completo e ispezionabile di pulizia e recupero oceanico?",
+      "problem": "Come costruire un costo livellato completo e ispezionabile di pulizia e recupero oceanico?",
+      "whyItMatters": "Includere capitale annualizzato e ogni costo per tonnellata permanente verificata.",
+      "assumptions": [
+        "Perimetri e verifica possono cambiare le prestazioni apparenti."
+      ],
+      "openQuestions": [
+        "Quali input mancanti pesano di più e un team indipendente può replicare?"
+      ]
+    }
+  },
+  "stats": {
+    "title": "Statistiche del sito",
+    "uptime": "Tempo online",
+    "visitors": "Visitatori totali",
+    "notLaunched": "Non ancora pubblicato",
+    "unconfigured": "Contatore non attivo",
+    "unavailable": "Temporaneamente non disponibile",
+    "loading": "Caricamento…",
+    "days": "giorni",
+    "hours": "ore",
+    "minutes": "min",
+    "note": "Browser anonimi deduplicati con cookie proprietario fino a un anno. Cancellare cookie o cambiare dispositivo può contare di nuovo. Non sono persone fisiche. Nessun IP o cronologia; DNT/GPC rispettati."
+  }
+}

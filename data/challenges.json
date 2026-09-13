@@ -1,0 +1,174 @@
+[
+  {
+    "id": "CH-001",
+    "slug": "ocean-plastic-density",
+    "status": "OPEN",
+    "category": "oceanography",
+    "evidenceLevel": "E0",
+    "targetMetric": {
+      "unit": "kg/km² · kg/h",
+      "value": null
+    },
+    "knownFacts": [],
+    "datasets": [],
+    "sources": [
+      "SRC-001"
+    ],
+    "submissions": [],
+    "lastUpdated": "2026-09-12",
+    "maintainers": []
+  },
+  {
+    "id": "CH-002",
+    "slug": "logistics-energy-floor",
+    "status": "OPEN",
+    "category": "logistics",
+    "evidenceLevel": "E0",
+    "targetMetric": {
+      "unit": "kWh/t",
+      "value": null
+    },
+    "knownFacts": [],
+    "datasets": [],
+    "sources": [],
+    "submissions": [],
+    "lastUpdated": "2026-09-12",
+    "maintainers": []
+  },
+  {
+    "id": "CH-003",
+    "slug": "autonomous-interceptor",
+    "status": "OPEN",
+    "category": "robotics",
+    "evidenceLevel": "E0",
+    "targetMetric": {
+      "unit": "€/t",
+      "value": null
+    },
+    "knownFacts": [],
+    "datasets": [],
+    "sources": [],
+    "submissions": [],
+    "lastUpdated": "2026-09-12",
+    "maintainers": []
+  },
+  {
+    "id": "CH-004",
+    "slug": "satellite-detection",
+    "status": "OPEN",
+    "category": "remoteSensing",
+    "evidenceLevel": "E0",
+    "targetMetric": {
+      "unit": "km² · confidence",
+      "value": null
+    },
+    "knownFacts": [],
+    "datasets": [],
+    "sources": [],
+    "submissions": [],
+    "lastUpdated": "2026-09-12",
+    "maintainers": []
+  },
+  {
+    "id": "CH-005",
+    "slug": "drone-search",
+    "status": "OPEN",
+    "category": "robotics",
+    "evidenceLevel": "E0",
+    "targetMetric": {
+      "unit": "kWh/t · h/t",
+      "value": null
+    },
+    "knownFacts": [],
+    "datasets": [],
+    "sources": [],
+    "submissions": [],
+    "lastUpdated": "2026-09-12",
+    "maintainers": []
+  },
+  {
+    "id": "CH-006",
+    "slug": "interception-drag",
+    "status": "OPEN",
+    "category": "marine",
+    "evidenceLevel": "E0",
+    "targetMetric": {
+      "unit": "N · kW · €/t",
+      "value": null
+    },
+    "knownFacts": [],
+    "datasets": [],
+    "sources": [],
+    "submissions": [],
+    "lastUpdated": "2026-09-12",
+    "maintainers": []
+  },
+  {
+    "id": "CH-007",
+    "slug": "pyrolysis-net-energy",
+    "status": "OPEN",
+    "category": "energy",
+    "evidenceLevel": "E0",
+    "targetMetric": {
+      "unit": "kWh/t (net)",
+      "value": null
+    },
+    "knownFacts": [],
+    "datasets": [],
+    "sources": [],
+    "submissions": [],
+    "lastUpdated": "2026-09-12",
+    "maintainers": []
+  },
+  {
+    "id": "CH-008",
+    "slug": "mothership-swarm",
+    "status": "OPEN",
+    "category": "logistics",
+    "evidenceLevel": "E0",
+    "targetMetric": {
+      "unit": "€/t",
+      "value": null
+    },
+    "knownFacts": [],
+    "datasets": [],
+    "sources": [],
+    "submissions": [],
+    "lastUpdated": "2026-09-12",
+    "maintainers": []
+  },
+  {
+    "id": "CH-009",
+    "slug": "maintenance-economy",
+    "status": "OPEN",
+    "category": "economics",
+    "evidenceLevel": "E0",
+    "targetMetric": {
+      "unit": "€/t",
+      "value": null
+    },
+    "knownFacts": [],
+    "datasets": [],
+    "sources": [],
+    "submissions": [],
+    "lastUpdated": "2026-09-12",
+    "maintainers": []
+  },
+  {
+    "id": "CH-010",
+    "slug": "lcocr-baseline",
+    "status": "OPEN",
+    "category": "economics",
+    "evidenceLevel": "E0",
+    "targetMetric": {
+      "unit": "€/t",
+      "value": null
+    },
+    "knownFacts": [],
+    "datasets": [],
+    "sources": [],
+    "submissions": [],
+    "lastUpdated": "2026-09-12",
+    "maintainers": []
+  }
+]

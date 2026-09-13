@@ -1,0 +1,33 @@
+name: "Solution proposal"
+description: "Propose a competing technical route or prototype."
+title: "[Solution proposal] "
+body:
+  - type: markdown
+    attributes:
+      value: "Unknown is valid. Do not disclose credentials or private data. For vulnerabilities use SECURITY.md."
+  - type: textarea
+    id: proposal
+    attributes:
+      label: "Approach, cost boundary, evidence, uncertainty and qualified safety review needs"
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: "Evidence, source links, data license and uncertainty"
+      description: "Write unknown when no evidence is available; never invent it."
+    validations:
+      required: true
+  - type: textarea
+    id: impact
+    attributes:
+      label: "Affected methodology, public data, languages and RFC requirement"
+    validations:
+      required: true
+  - type: checkboxes
+    id: conduct
+    attributes:
+      label: "Contribution terms"
+      options:
+        - label: "I have read CONTRIBUTING.md and CODE_OF_CONDUCT.md and have the right to submit this material."
+          required: true

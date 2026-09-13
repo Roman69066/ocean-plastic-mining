@@ -1,0 +1,95 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Verified leaderboard entry",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "rank",
+    "team",
+    "solution",
+    "lcocr",
+    "evidenceLevel",
+    "location",
+    "testDuration",
+    "tonnesRemoved",
+    "verification",
+    "updated",
+    "priceYear",
+    "methodologyVersion",
+    "sourceIds"
+  ],
+  "properties": {
+    "rank": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "team": {
+      "type": "string",
+      "minLength": 1
+    },
+    "solution": {
+      "type": "string",
+      "minLength": 1
+    },
+    "lcocr": {
+      "type": "number",
+      "minimum": 0
+    },
+    "evidenceLevel": {
+      "enum": [
+        "E5",
+        "E6"
+      ]
+    },
+    "location": {
+      "type": "string",
+      "minLength": 1
+    },
+    "testDuration": {
+      "type": "string",
+      "minLength": 1
+    },
+    "tonnesRemoved": {
+      "type": "number",
+      "exclusiveMinimum": 0
+    },
+    "verification": {
+      "type": "object",
+      "required": [
+        "independentAuditor",
+        "reportUrl",
+        "status"
+      ],
+      "properties": {
+        "independentAuditor": {
+          "type": "string"
+        },
+        "reportUrl": {
+          "type": "string",
+          "format": "uri"
+        },
+        "status": {
+          "const": "VERIFIED"
+        }
+      }
+    },
+    "updated": {
+      "type": "string",
+      "format": "date"
+    },
+    "priceYear": {
+      "type": "integer",
+      "minimum": 2000
+    },
+    "methodologyVersion": {
+      "type": "string"
+    },
+    "sourceIds": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1
+    }
+  }
+}

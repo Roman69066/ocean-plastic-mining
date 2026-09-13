@@ -1,0 +1,44 @@
+[
+  {
+    "id": "SOL-001",
+    "textKey": "1",
+    "evidenceLevel": "E0",
+    "status": "OPEN",
+    "team": null
+  },
+  {
+    "id": "SOL-002",
+    "textKey": "2",
+    "evidenceLevel": "E0",
+    "status": "OPEN",
+    "team": null
+  },
+  {
+    "id": "SOL-003",
+    "textKey": "3",
+    "evidenceLevel": "E0",
+    "status": "OPEN",
+    "team": null
+  },
+  {
+    "id": "SOL-004",
+    "textKey": "4",
+    "evidenceLevel": "E0",
+    "status": "OPEN",
+    "team": null
+  },
+  {
+    "id": "SOL-005",
+    "textKey": "5",
+    "evidenceLevel": "E0",
+    "status": "OPEN",
+    "team": null
+  },
+  {
+    "id": "SOL-006",
+    "textKey": "6",
+    "evidenceLevel": "E0",
+    "status": "OPEN",
+    "team": null
+  }
+]

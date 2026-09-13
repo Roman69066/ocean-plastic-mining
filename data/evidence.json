@@ -1,0 +1,69 @@
+{
+  "supported": [],
+  "uncertain": [
+    {
+      "id": "AS-001",
+      "statementKey": "1",
+      "evidenceLevel": "E0",
+      "sourceIds": [],
+      "lastUpdated": "2026-09-12"
+    },
+    {
+      "id": "AS-002",
+      "statementKey": "2",
+      "evidenceLevel": "E0",
+      "sourceIds": [],
+      "lastUpdated": "2026-09-12"
+    },
+    {
+      "id": "AS-003",
+      "statementKey": "3",
+      "evidenceLevel": "E0",
+      "sourceIds": [],
+      "lastUpdated": "2026-09-12"
+    },
+    {
+      "id": "AS-004",
+      "statementKey": "4",
+      "evidenceLevel": "E0",
+      "sourceIds": [],
+      "lastUpdated": "2026-09-12"
+    },
+    {
+      "id": "AS-005",
+      "statementKey": "5",
+      "evidenceLevel": "E0",
+      "sourceIds": [],
+      "lastUpdated": "2026-09-12"
+    },
+    {
+      "id": "AS-006",
+      "statementKey": "6",
+      "evidenceLevel": "E0",
+      "sourceIds": [],
+      "lastUpdated": "2026-09-12"
+    },
+    {
+      "id": "AS-007",
+      "statementKey": "7",
+      "evidenceLevel": "E0",
+      "sourceIds": [],
+      "lastUpdated": "2026-09-12"
+    },
+    {
+      "id": "AS-008",
+      "statementKey": "8",
+      "evidenceLevel": "E0",
+      "sourceIds": [],
+      "lastUpdated": "2026-09-12"
+    },
+    {
+      "id": "AS-009",
+      "statementKey": "9",
+      "evidenceLevel": "E0",
+      "sourceIds": [],
+      "lastUpdated": "2026-09-12"
+    }
+  ],
+  "rejected": []
+}

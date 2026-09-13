@@ -1,0 +1,526 @@
+{
+  "meta": {
+    "title": "Ocean Plastic Mining Project",
+    "description": "An open engineering project to reduce the cost of permanently removing ocean plastic. Inspect the model. Challenge the assumptions."
+  },
+  "nav": [
+    "Overview",
+    "Thesis",
+    "Cost model",
+    "Challenges",
+    "Evidence",
+    "Solutions",
+    "Leaderboard",
+    "Starter kit",
+    "Contribute",
+    "Methodology",
+    "Governance",
+    "About"
+  ],
+  "ui": {
+    "project": "Ocean Plastic Mining Project",
+    "short": "OPEN OCEAN ENGINEERING",
+    "research": "Research / pre-validation",
+    "review": "Community review needed",
+    "language": "Language",
+    "menu": "Navigation",
+    "skip": "Skip to content",
+    "open": "Open",
+    "all": "View all challenges",
+    "explore": "Explore the challenges",
+    "model": "View the cost model",
+    "github": "Contribute on GitHub",
+    "updated": "Updated",
+    "target": "Target metric",
+    "evidence": "Evidence level",
+    "unknown": "Unknown",
+    "empty": "No records submitted yet.",
+    "source": "Sources",
+    "status": "Status",
+    "category": "Discipline",
+    "problem": "Engineering question",
+    "why": "Why it matters",
+    "facts": "Known facts",
+    "assumptions": "Assumptions to test",
+    "questions": "Open questions",
+    "datasets": "Datasets",
+    "submissions": "Submissions",
+    "maintainers": "Maintainers",
+    "unassigned": "Seeking a maintainer",
+    "submit": "Submit a contribution",
+    "download": "Download",
+    "hypothetical": "Hypothetical · not measured",
+    "notVerified": "Not yet verified",
+    "current": "Current verified cost",
+    "unit": "€/t permanently removed",
+    "back": "All challenges",
+    "noSources": "No supporting evidence submitted.",
+    "reviewNote": "Initial translations are open for community correction. No human review is claimed.",
+    "repoPending": "The public GitHub repository is not connected yet. Download the contribution guide and templates; submission links will activate when the repository is configured.",
+    "footer": "Measure it. Test it. Lower the cost.",
+    "draft": "Draft methodology · RFC review pending",
+    "noData": "Unknown is a valid answer.",
+    "fullCost": "Full annual cost",
+    "operatingCost": "Annual operating cost",
+    "tonnes": "Verified dry tonnes / year",
+    "calculate": "Calculate scenario",
+    "reset": "Clear inputs",
+    "modelOnly": "Model only — your inputs are not verified data.",
+    "invalid": "Enter finite, non-negative costs and revenues, a lifetime above zero, a discount rate from 0 to 100%, and verified tonnes above zero. Complete every field.",
+    "annualCapex": "Annualized CAPEX",
+    "capex": "Initial CAPEX (€)",
+    "lifetime": "Asset life (years)",
+    "rate": "Discount rate (%)",
+    "resourceRevenue": "Resource revenue (€/year)",
+    "publicPayment": "Public payment (€/year)",
+    "inputHint": "All inputs are annual EUR except initial CAPEX, asset life, discount rate and tonnes. Enter 0 for a known zero; blank means unknown.",
+    "outputHint": "Gross LCOCR does not subtract revenue or public payments. No default scenario is presented as real performance.",
+    "t1Operating": "T1 operating balance",
+    "t1Full": "T1 full-cost balance",
+    "t2Balance": "T2 full-cost balance",
+    "rank": "Rank",
+    "team": "Team",
+    "solution": "Solution",
+    "location": "Location",
+    "duration": "Test duration",
+    "removed": "Tonnes removed",
+    "verification": "Verification",
+    "search": "Search challenges",
+    "allCategories": "All disciplines",
+    "noResults": "No matching challenges.",
+    "scope": "Scope",
+    "next": "Next question",
+    "readGuide": "Read contribution guide"
+  },
+  "home": {
+    "eyebrow": "AN OPEN ENGINEERING QUESTION",
+    "title": "Can we make ocean cleanup",
+    "emphasis": "10× cheaper?",
+    "subtitle": "Reduce the cost of permanent plastic removal until many independent teams can take part. Start with an inspectable model, not a promise.",
+    "north": "ONE NORTH STAR",
+    "northText": "Cost per tonne permanently removed. Full lifecycle. Inspectable evidence.",
+    "milestone": "A cost curve, not a countdown.",
+    "t1": "Public-payment viability",
+    "t2": "Unsubsidized commercial viability",
+    "cleanup": "Plastic is a liability.",
+    "cleanupQuestion": "Who pays to remove it?",
+    "mining": "Plastic is a low-grade resource.",
+    "miningQuestion": "How low can extraction cost go?",
+    "metaphor": "“Mining” is an economic and engineering metaphor. It does not imply that ocean plastic is profitable, or that pyrolysis is the right route.",
+    "shift": "A different engineering question.",
+    "pioneers": "From possibility to repeatability.",
+    "pioneersText": "The Ocean Cleanup has carried out substantial engineering exploration of offshore plastic collection. Can the full cost now fall far enough for independent teams to replicate the work?",
+    "analogy": "NASA → SpaceX is a strategic analogy: early exploration, then industrialization, standardization and reuse. It is not evidence that ocean cleanup will follow the same path.",
+    "frontier": "The next frontier is discovering how cheaply plastic can be removed permanently.",
+    "challenges": "Ten unknowns. Open to everyone.",
+    "challengeText": "Bring a calculation, a dataset, a test — or a well-supported objection.",
+    "principle": "Extraordinary engineering claims require inspectable evidence.",
+    "principleText": "Our core assumptions can be wrong. Failed experiments and negative results belong in the record.",
+    "breakTitle": "Don’t just support the idea.",
+    "breakEmphasis": "Try to break it.",
+    "breakText": "Find an error. Submit evidence. Improve the model. Build an independent experiment.",
+    "last": "The ocean doesn’t need another promise. It needs a measurable cost curve."
+  },
+  "pages": {
+    "thesis": {
+      "title": "The thesis is a question.",
+      "intro": "Can automation, standardization, energy recovery and shared logistics reduce full cost enough for independent teams to participate?",
+      "sections": [
+        [
+          "Start with the denominator",
+          "The goal is permanent removal, not collection alone. Losses, rejected material and unverified end destinations do not count as permanently removed tonnes."
+        ],
+        [
+          "Test the economic transition",
+          "Public funding may start experiments. Independent teams may enter; shared services may emerge. Each arrow is a hypothesis, not a forecast."
+        ],
+        [
+          "An open infrastructure",
+          "Publish assumptions, models, evidence and failed tests so that other teams can compare approaches and maintain the project independently of its founder."
+        ],
+        [
+          "A resource with an unknown grade",
+          "Offshore plastic is dispersed, heterogeneous and contaminated. A total garbage-patch mass cannot substitute for a workable density distribution or a measured collection rate."
+        ]
+      ]
+    },
+    "cost": {
+      "title": "The cost is the challenge.",
+      "intro": "The north-star metric is cost per tonne permanently removed. Vessel size, collector length, publicity and fundraising are not substitutes.",
+      "sections": [
+        [
+          "One complete boundary",
+          "Annualized capital plus all annual operating, search, energy, logistics, maintenance, processing, disposal and compliance costs, divided by verified permanent removal."
+        ],
+        [
+          "No verified baseline yet",
+          "The curve below is conceptual. It has no dates or numeric cost axis and does not estimate any existing organization’s cost."
+        ]
+      ]
+    },
+    "challenges": {
+      "title": "Open engineering challenges.",
+      "intro": "Ten bounded questions. Comparable metrics. No preferred technology. Every challenge starts at hypothesis level."
+    },
+    "evidence": {
+      "title": "Show the evidence.",
+      "intro": "Evidence quality and conclusion direction are separate axes. E5 can support or reject a hypothesis. An E0 claim is still a hypothesis.",
+      "sections": [
+        [
+          "A core project assumption was wrong.",
+          "This statement must be publishable when evidence warrants it. No core assumption has yet been reliably rejected in this project; the rejected record is currently empty."
+        ],
+        [
+          "Report failures",
+          "Record null results, adverse effects, losses and conflicting evidence. Retain earlier claims and explain revisions instead of silently removing inconvenient results."
+        ]
+      ]
+    },
+    "solutions": {
+      "title": "Let evidence and cost decide.",
+      "intro": "Competing approaches are welcome. These are research directions, not operating teams or validated systems."
+    },
+    "leaderboard": {
+      "title": "A leaderboard that earns its numbers.",
+      "intro": "No solution has met the verification threshold yet.",
+      "sections": [
+        [
+          "Admission threshold",
+          "Draft V1 requires E5 or E6 evidence, inspectable cost boundaries, traceable dry mass and final fate, test duration, location, and independent audit of the submission. E5 is not independent replication."
+        ],
+        [
+          "Compare like with like",
+          "Separate evidence tiers. Report uncertainty, price year and operating conditions. An E1 estimate must never compete as an equal to an E5 operational result."
+        ]
+      ]
+    },
+    "starter-kit": {
+      "title": "Start with something inspectable.",
+      "intro": "Download working templates. Replace unknowns with evidence. Hardware designs and deployment protocols are not available yet."
+    },
+    "contribute": {
+      "title": "How do you want to contribute?",
+      "intro": "A correction can be more useful than an endorsement. Start with a bounded question and enough evidence for someone else to check it."
+    },
+    "methodology": {
+      "title": "Define the boundary. Then measure.",
+      "intro": "LCOCR — Levelized Cost of Ocean Cleanup and Recovery. Version 0.1 is a proposal awaiting RFC review, not a frozen standard.",
+      "sections": [
+        [
+          "Permanent removal",
+          "Use verified dry plastic mass with a documented chain of custody and final treatment or disposal. Subtract losses and any material returned to the environment. Energy recovery is not permanent carbon storage; emissions and residues must be reported separately."
+        ],
+        [
+          "Avoid double counting",
+          "OPEX is residual operating expenditure only. Search, energy, logistics, maintenance, processing, disposal and compliance each have their own mutually exclusive bucket. Keep a ledger for allocation and shared assets."
+        ],
+        [
+          "Capital and uncertainty",
+          "Annualize capital with a capital-recovery factor. Declare life, discount rate, currency price year, utilization, allocation, measurement error and sensitivity ranges. A blank value is unknown, never zero."
+        ],
+        [
+          "T1 has two boundaries",
+          "The operating threshold is resource revenue plus public payment ≥ full operating cost. The homepage uses the more conservative full-cost condition including capital replacement. Report both; operating survival alone does not prove durable viability."
+        ],
+        [
+          "T2: subsidy exit",
+          "Resource revenue ≥ full cost, including annualized capital, compliant processing, disposal and risk allowances. This remains an unverified research threshold."
+        ],
+        [
+          "T3: distant research",
+          "Long-term offshore living cost < shore living + crew rotation + transport cost. This is not a V1 deployment objective or a forecast."
+        ]
+      ]
+    },
+    "governance": {
+      "title": "Built to outlive its founder.",
+      "intro": "Stewardship follows sustained, reliable contribution. The founder has no permanent right to supreme maintenance authority.",
+      "sections": [
+        [
+          "Founder / Steward",
+          "Initially coordinates project direction, proposed methodology and community formation. Can later move into an advisory role without blocking succession."
+        ],
+        [
+          "Domain maintainers",
+          "Marine engineering, energy and pyrolysis, remote sensing, cost model, data, web and translation each need accountable maintainers. All roles are currently unassigned."
+        ],
+        [
+          "Lead Maintainer and succession",
+          "When a maintainer group exists, candidates are nominated publicly with contribution evidence. After a 14-day discussion, a two-thirds vote of active maintainers selects a lead. Inactivity and conflicts of interest have documented procedures."
+        ],
+        [
+          "RFC decisions",
+          "Changes to LCOCR, evidence levels, challenge evaluation, data boundaries, governance, licenses or major technical standards require a public RFC and recorded decision. RFC-0001 is proposed, not accepted."
+        ]
+      ]
+    },
+    "about": {
+      "title": "An open question. A public record.",
+      "intro": "Ocean Plastic Mining Project is a working name for open engineering research. Project status: research / pre-validation.",
+      "sections": [
+        [
+          "What this project is not",
+          "Not a fundraising campaign; not a cleanup company; not a floating-city promotion; not a proven profitable business; not a mandate to pyrolyze all plastic; not opposition to existing ocean organizations; not a conclusion looking for evidence."
+        ],
+        [
+          "Safety and responsibility",
+          "Marine work, vessels, machinery, autonomous equipment, fuels and high-temperature processing require competent review. Public discussion or designs are not permission to deploy. Experiments must meet applicable maritime, environmental, class, equipment and impact requirements."
+        ],
+        [
+          "Privacy and openness",
+          "No accounts, payments or cross-site tracking. Language is stored locally. Optional visitor counting stores hashes of random browser IDs and a first-party cookie, not IP addresses or browsing paths. Code: Apache-2.0; original content: CC BY 4.0; third-party licenses remain unchanged."
+        ]
+      ]
+    }
+  },
+  "labels": {
+    "supported": "Supported",
+    "uncertain": "Uncertain",
+    "rejected": "Rejected",
+    "supportedEmpty": "No project-reviewed supporting records yet.",
+    "rejectedEmpty": "No reliably rejected claims recorded yet.",
+    "E0": "Hypothesis",
+    "E1": "Back-of-envelope",
+    "E2": "Analytical model",
+    "E3": "Laboratory evidence",
+    "E4": "Controlled field test",
+    "E5": "Operational evidence",
+    "E6": "Independent replication",
+    "oceanography": "Oceanography",
+    "logistics": "Logistics",
+    "robotics": "Autonomy & robotics",
+    "remoteSensing": "Remote sensing",
+    "marine": "Marine engineering",
+    "energy": "Energy & materials",
+    "economics": "Engineering economics"
+  },
+  "costLabels": {
+    "opex": "Residual OPEX",
+    "search": "Search (excluding separately booked energy)",
+    "energy": "Energy",
+    "logistics": "Logistics",
+    "maintenance": "Maintenance",
+    "processing": "Processing",
+    "disposal": "Disposal",
+    "compliance": "Compliance"
+  },
+  "assumptions": [
+    "Recovered fuel can power the collection system.",
+    "Pyrolysis is the best resource-recovery route.",
+    "Ocean plastic can already be mined profitably.",
+    "Public payments can support T1.",
+    "Scaling significantly reduces unit cost.",
+    "A shared offshore logistics industry will emerge.",
+    "Long-term offshore settlements will follow.",
+    "An existing organization’s full €/t cost is known.",
+    "Carbon credits apply to ocean plastic removal."
+  ],
+  "solutionTexts": [
+    [
+      "Large interceptor",
+      "Test capture efficiency against vessel, drag and logistics cost."
+    ],
+    [
+      "Small autonomous vessel",
+      "Test reliability, communications, recovery and lifecycle cost."
+    ],
+    [
+      "Sailing interceptor",
+      "Measure weather-limited availability and true propulsion savings."
+    ],
+    [
+      "Mothership + swarm",
+      "Compare shared support at 1, 10, 50 and 100 units."
+    ],
+    [
+      "Passive collection",
+      "Measure retention, drift, bycatch and retrieval cost."
+    ],
+    [
+      "Hybrid approach",
+      "Publish component interfaces and shared-cost allocation."
+    ]
+  ],
+  "contributions": [
+    [
+      "Find an error",
+      "Correct a model, dataset or argument."
+    ],
+    [
+      "Submit evidence",
+      "Provide a paper, dataset or reproducible test."
+    ],
+    [
+      "Solve a challenge",
+      "Address an open question with a comparable metric."
+    ],
+    [
+      "Improve the cost model",
+      "Review boundaries, allocations and uncertainty."
+    ],
+    [
+      "Build hardware",
+      "Document a bounded prototype and qualified safety review."
+    ],
+    [
+      "Translate",
+      "Review any of the seven languages."
+    ],
+    [
+      "Maintain",
+      "Take responsibility for a field over time."
+    ]
+  ],
+  "kit": [
+    "Cost model (CSV)",
+    "Challenge template",
+    "Evidence template",
+    "Dataset template",
+    "Field test template",
+    "Safety checklist — placeholder",
+    "Contribution guide",
+    "Translation guide",
+    "RFC template"
+  ],
+  "translation": {
+    "status": "community-review-needed",
+    "reviewedBy": [],
+    "lastReviewedDate": null,
+    "sourceLanguage": "en"
+  },
+  "challenges": {
+    "CH-001": {
+      "title": "Ocean Plastic Density",
+      "summary": "How many kilograms can a workable area yield per square kilometre, navigation hour and effective capture hour?",
+      "problem": "How many kilograms can a workable area yield per square kilometre, navigation hour and effective capture hour?",
+      "whyItMatters": "A density distribution, not a garbage-patch total, must feed the cost model.",
+      "assumptions": [
+        "Accessible density may differ from published regional averages."
+      ],
+      "openQuestions": [
+        "How do season, weather, depth and capture selectivity change usable density?"
+      ]
+    },
+    "CH-002": {
+      "title": "Logistics Energy Floor",
+      "summary": "What minimum energy is needed to move, capture, store and transport a tonne, even if plastic arrives beside the collector for free?",
+      "problem": "What minimum energy is needed to move, capture, store and transport a tonne, even if plastic arrives beside the collector for free?",
+      "whyItMatters": "Find the physical floor that smarter software cannot remove.",
+      "assumptions": [
+        "Transfers, station keeping and return trips may dominate energy use."
+      ],
+      "openQuestions": [
+        "Which lower bounds remain valid under realistic waves and utilization?"
+      ]
+    },
+    "CH-003": {
+      "title": "Low-Cost Autonomous Interceptor",
+      "summary": "Design an unmanned or highly automated unit for the lowest complete lifecycle cost per tonne permanently removed.",
+      "problem": "Design an unmanned or highly automated unit for the lowest complete lifecycle cost per tonne permanently removed.",
+      "whyItMatters": "Maximum capture alone does not establish a cheaper system.",
+      "assumptions": [
+        "Autonomy may reduce crew expense while increasing recovery and maintenance cost."
+      ],
+      "openQuestions": [
+        "What failure rate and service interval make the full system competitive?"
+      ]
+    },
+    "CH-004": {
+      "title": "Satellite Plastic Detection",
+      "summary": "At what resolution, weather conditions and confidence can satellite sensing reduce unproductive searching?",
+      "problem": "At what resolution, weather conditions and confidence can satellite sensing reduce unproductive searching?",
+      "whyItMatters": "Separate theoretical possibility, laboratory research, commercial data and verified sea operations.",
+      "assumptions": [
+        "A detectable surface signal may not identify collectable plastic."
+      ],
+      "openQuestions": [
+        "What are precision, recall, revisit interval and cost per avoided search hour?"
+      ]
+    },
+    "CH-005": {
+      "title": "Drone Local Search",
+      "summary": "Can drones scout around a support ship or interceptor to reduce search energy and time per captured tonne?",
+      "problem": "Can drones scout around a support ship or interceptor to reduce search energy and time per captured tonne?",
+      "whyItMatters": "Measure net savings after flights, recovery and data processing.",
+      "assumptions": [
+        "Local reconnaissance may improve routing only in limited conditions."
+      ],
+      "openQuestions": [
+        "What range, weather window and false-positive rate are operationally useful?"
+      ]
+    },
+    "CH-006": {
+      "title": "Interception Drag",
+      "summary": "How much drag do interception systems create at real current speeds and sea states?",
+      "problem": "How much drag do interception systems create at real current speeds and sea states?",
+      "whyItMatters": "Connect structure directly to propulsion power, fuel demand and €/t.",
+      "assumptions": [
+        "Controlled-water measurements may not generalize to loaded offshore systems."
+      ],
+      "openQuestions": [
+        "How do loading, waves, fouling and geometry change the force curve?"
+      ]
+    },
+    "CH-007": {
+      "title": "Pyrolysis Net Energy",
+      "summary": "How much usable net energy remains after treating real aged, contaminated, salty and wet ocean plastic?",
+      "problem": "How much usable net energy remains after treating real aged, contaminated, salty and wet ocean plastic?",
+      "whyItMatters": "Include drying, sorting, preheating, reaction, cleanup, auxiliaries, residue handling and maintenance downtime.",
+      "assumptions": [
+        "Ideal-polymer heating value may greatly overstate useful net energy."
+      ],
+      "openQuestions": [
+        "Can a measured mass-and-energy balance include emissions, residues and actual plant availability?"
+      ]
+    },
+    "CH-008": {
+      "title": "Mothership + Swarm",
+      "summary": "Does one shared support vessel with many inexpensive interceptors lower €/t relative to a single large system?",
+      "problem": "Does one shared support vessel with many inexpensive interceptors lower €/t relative to a single large system?",
+      "whyItMatters": "Compare 1, 10, 50 and 100 units under identical boundaries.",
+      "assumptions": [
+        "Shared support savings may be offset by coordination and service bottlenecks."
+      ],
+      "openQuestions": [
+        "How do queuing, correlated failures and weather affect utilization?"
+      ]
+    },
+    "CH-009": {
+      "title": "Offshore Maintenance Economy",
+      "summary": "What happens to cost when 1, 10, 100 or 1000 teams share repair, supplies, storage, crew transport, processing and data?",
+      "problem": "What happens to cost when 1, 10, 100 or 1000 teams share repair, supplies, storage, crew transport, processing and data?",
+      "whyItMatters": "Validate economies of scale instead of assuming they exist.",
+      "assumptions": [
+        "Growing demand may support shared services but can also increase congestion."
+      ],
+      "openQuestions": [
+        "What demand, distance and service reliability are needed to break even?"
+      ]
+    },
+    "CH-010": {
+      "title": "LCOCR Baseline",
+      "summary": "Establish a complete and inspectable Levelized Cost of Ocean Cleanup and Recovery baseline.",
+      "problem": "Establish a complete and inspectable Levelized Cost of Ocean Cleanup and Recovery baseline.",
+      "whyItMatters": "Include annualized CAPEX and every operating cost per verified tonne permanently removed.",
+      "assumptions": [
+        "Cost boundaries and removal verification may change apparent performance."
+      ],
+      "openQuestions": [
+        "Which missing inputs most affect the result, and can an independent team reproduce it?"
+      ]
+    }
+  },
+  "stats": {
+    "title": "Site statistics",
+    "uptime": "Time online",
+    "visitors": "Total visitors",
+    "notLaunched": "Not launched yet",
+    "unconfigured": "Counter not enabled",
+    "unavailable": "Temporarily unavailable",
+    "loading": "Loading…",
+    "days": "days",
+    "hours": "hours",
+    "minutes": "min",
+    "note": "Anonymous browsers, deduplicated by a first-party cookie for up to one year. Clearing cookies or changing devices may count again. Not a count of natural persons. No IP addresses or browsing history stored; DNT/GPC respected."
+  }
+}
