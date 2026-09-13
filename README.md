@@ -54,7 +54,7 @@ Evidence direction (supported / uncertain / rejected) is independent of E0–E6 
 
 ## Contributing
 
-Start with [CONTRIBUTING](CONTRIBUTING.md), [templates](public/toolkit/) and [RFCs](rfcs/). English is the cross-country collaboration baseline; Chinese and English are priority languages. Other-language submissions are welcome. No account system is built into the website.
+The canonical public repository is <https://github.com/Roman69066/ocean-plastic-mining>. Start with [CONTRIBUTING](CONTRIBUTING.md), [GitHub Issue Forms](https://github.com/Roman69066/ocean-plastic-mining/issues/new/choose), [templates](public/toolkit/) and [RFCs](rfcs/). English is the cross-country collaboration baseline; Chinese and English are priority languages. Other-language submissions are welcome. No account system is built into the website.
 
 ## Governance
 
@@ -71,7 +71,6 @@ Import this **independent project directory**, not the unrelated parent reposito
 Optional public configuration (rebuild after changes):
 
 - `NEXT_PUBLIC_SITE_URL`: actual origin; used for canonical, hreflang, sitemap and Open Graph. Defaults to localhost for local development. Set before public deployment.
-- `NEXT_PUBLIC_GITHUB_URL`: actual `https://github.com/owner/repository`; enables issue-form links. When absent, downloads and an explicit repository-pending notice replace submission links.
 - `NEXT_PUBLIC_SITE_LAUNCHED_AT`: actual first public launch in UTC ISO 8601; keep unchanged on redeploy. Leave unset before launch.
 
 Optional server-only counter configuration:

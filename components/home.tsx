@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { challenges, sources } from "@/lib/data";
 import { localHref, type Dictionary, type Locale } from "@/lib/i18n";
-import { repositoryUrl } from "@/lib/config";
+import { contributionHref, repositoryUrl } from "@/lib/config";
 import { ChallengeCard } from "./challenge-card";
 import { CostCurve } from "./cost-curve";
 export function Home({ d, locale }: { d: Dictionary; locale: Locale }) {
@@ -32,10 +32,7 @@ export function Home({ d, locale }: { d: Dictionary; locale: Locale }) {
                 {d.ui.model}
               </Link>
             </div>
-            <a
-              className="subtle-link"
-              href={repositoryUrl || localHref(locale, "contribute")}
-            >
+            <a className="subtle-link" href={repositoryUrl}>
               {d.ui.github} <span aria-hidden="true">↗</span>
             </a>
           </div>
@@ -190,19 +187,16 @@ export function Home({ d, locale }: { d: Dictionary; locale: Locale }) {
         <p>{d.home.breakText}</p>
         <div className="actions">
           {[0, 2, 1, 3].map((i) => (
-            <Link
-              href={localHref(locale, "contribute") + `#contribution-${i}`}
+            <a
+              href={contributionHref(i)}
               key={i}
               className={i === 0 ? "button primary" : "button"}
             >
               {d.contributions[i][0]} ↗
-            </Link>
+            </a>
           ))}
         </div>
-        <a
-          className="subtle-link"
-          href={repositoryUrl || localHref(locale, "contribute")}
-        >
+        <a className="subtle-link" href={repositoryUrl}>
           GitHub ↗
         </a>
       </section>

@@ -4,15 +4,15 @@ Measure it. Test it. Challenge the assumption. Negative results are welcome.
 
 ## Choose a contribution
 
-1. **Find an error**: use Data correction for model/data issues or Bug report for software. State the affected record, current claim, proposed correction, source and uncertainty.
-2. **Submit evidence**: use Evidence submission. Provide a stable source, license, methods, raw data, limitations, proposed E0–E6 level and a separate conclusion direction. Do not call a paper operational validation without checking its methods.
-3. **Solve or propose a challenge**: reference `CH-xxx`, its target metric and boundary. Use Challenge proposal and the challenge template. Include unsuccessful approaches and failure conditions.
+1. **Find an error**: use [Data correction](https://github.com/Roman69066/ocean-plastic-mining/issues/new?template=data-correction.yml) for model/data issues or [Bug report](https://github.com/Roman69066/ocean-plastic-mining/issues/new?template=bug-report.yml) for software. State the affected record, current claim, proposed correction, source and uncertainty.
+2. **Submit evidence**: use [Evidence submission](https://github.com/Roman69066/ocean-plastic-mining/issues/new?template=evidence-submission.yml). Provide a stable source, license, methods, raw data, limitations, proposed E0–E6 level and a separate conclusion direction. Do not call a paper operational validation without checking its methods.
+3. **Solve or propose a challenge**: reference `CH-xxx`, its target metric and boundary. Use [Challenge proposal](https://github.com/Roman69066/ocean-plastic-mining/issues/new?template=challenge-proposal.yml) and the challenge template. Include unsuccessful approaches and failure conditions.
 4. **Improve the model**: edit `lib/cost-model.ts` and methodology together; supply a hand-checkable case. A boundary or definition change needs an RFC, not only code.
 5. **Build hardware**: use Solution proposal. Publish an inspectable bounded experiment, risk assessment and qualified review needs. A public design is not a deployment permit. Hardware licenses require separate review.
-6. **Translate**: use Translation correction and the translation guide. Edit only explanatory catalogs; never duplicate costs, IDs, evidence levels or dates into translated facts.
+6. **Translate**: use [Translation correction](https://github.com/Roman69066/ocean-plastic-mining/issues/new?template=translation-correction.yml) and the translation guide. Edit only explanatory catalogs; never duplicate costs, IDs, evidence levels or dates into translated facts.
 7. **Maintain**: use Governance proposal. Describe the domain, sustained contributions, availability, conflicts and handover plan. No role is awarded by donation or affiliation alone.
 
-If no public repository is connected, prepare a local patch and these templates. Do not send material to an invented contact. Once the repository is published, use its Issues and Pull Requests. English is the shared review baseline; contributions in any supported language are welcome.
+Use the public repository's [Issue Forms](https://github.com/Roman69066/ocean-plastic-mining/issues/new/choose) and Pull Requests. English is the shared review baseline; contributions in any supported language are welcome.
 
 ## Local changes and review
 

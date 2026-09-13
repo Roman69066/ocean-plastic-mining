@@ -14,7 +14,11 @@ import {
   type Locale,
   type PageKey,
 } from "@/lib/i18n";
-import { contributionHref, repositoryUrl } from "@/lib/config";
+import {
+  challengeContributionHref,
+  contributionHref,
+  issueChooserUrl,
+} from "@/lib/config";
 import { CostCurve } from "./cost-curve";
 import { CostCalculator } from "./cost-calculator";
 import { ChallengeBrowser } from "./challenge-browser";
@@ -41,9 +45,6 @@ function EvidenceScale({ d }: { d: Dictionary }) {
       ))}
     </div>
   );
-}
-function RepoNote({ d }: { d: Dictionary }) {
-  return repositoryUrl ? null : <p className="notice">{d.ui.repoPending}</p>;
 }
 export function ContentPage({
   page,
@@ -158,9 +159,7 @@ export function ContentPage({
               </div>
               <h2>{d.solutionTexts[i][0]}</h2>
               <p>{d.solutionTexts[i][1]}</p>
-              <Link href={localHref(locale, "contribute")}>
-                {d.ui.submit} ↗
-              </Link>
+              <a href={contributionHref(4)}>{d.ui.submit} ↗</a>
             </article>
           ))}
         </div>
@@ -238,7 +237,6 @@ export function ContentPage({
       )}
       {page === "contribute" && (
         <>
-          <RepoNote d={d} />
           <div className="contribution-grid">
             {d.contributions.map(([title, body], i) => (
               <article id={`contribution-${i}`} key={title}>
@@ -246,7 +244,7 @@ export function ContentPage({
                 <h2>{title}</h2>
                 <p>{body}</p>
                 <a className="text-link" href={contributionHref(i)}>
-                  {repositoryUrl ? d.ui.github : d.ui.readGuide} ↗
+                  {d.ui.github} ↗
                 </a>
               </article>
             ))}
@@ -312,9 +310,9 @@ export function ContentPage({
       {page !== "contribute" && (
         <aside className="page-end">
           <p>{d.home.breakEmphasis}</p>
-          <Link href={localHref(locale, "contribute")} className="button">
+          <a href={issueChooserUrl} className="button">
             {d.ui.submit} ↗
-          </Link>
+          </a>
         </aside>
       )}
     </div>
@@ -425,12 +423,9 @@ export function ChallengeDetail({
               <dd>{d.ui.unassigned}</dd>
             </div>
           </dl>
-          <Link
-            href={localHref(locale, "contribute") + "#contribution-2"}
-            className="button primary"
-          >
+          <a href={challengeContributionHref(c.id)} className="button primary">
             {d.ui.submit} ↗
-          </Link>
+          </a>
           <a href="/toolkit/evidence-template.md" className="text-link">
             {d.kit[2]} ↓
           </a>

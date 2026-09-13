@@ -85,7 +85,7 @@ export function Footer({ d, locale }: { d: Dictionary; locale: Locale }) {
               {d.nav[i + 1]}
             </Link>
           ))}
-          {repositoryUrl && <a href={repositoryUrl}>GitHub ↗</a>}
+          <a href={repositoryUrl}>GitHub ↗</a>
         </nav>
       </div>
       <SiteStats d={d} locale={locale} />

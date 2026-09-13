@@ -6,24 +6,37 @@ function publicOrigin(value: string | undefined) {
   return url.origin;
 }
 export const siteUrl = publicOrigin(process.env.NEXT_PUBLIC_SITE_URL);
-export const repositoryUrl = (() => {
-  const value = process.env.NEXT_PUBLIC_GITHUB_URL;
-  if (!value) return null;
-  if (!/^https:\/\/github\.com\/[\w.-]+\/[\w.-]+\/?$/.test(value))
-    throw new Error("GITHUB_URL must identify one public repository");
-  return value.replace(/\/$/, "");
-})();
+export const repositoryUrl =
+  "https://github.com/Roman69066/ocean-plastic-mining";
+export const repositoryContributingUrl = `${repositoryUrl}/blob/main/CONTRIBUTING.md`;
+export const issueChooserUrl = `${repositoryUrl}/issues/new/choose`;
 export const issueTemplates = [
   "data-correction.yml",
   "evidence-submission.yml",
   "challenge-proposal.yml",
-  "data-correction.yml",
+  "rfc-proposal.yml",
   "solution-proposal.yml",
   "translation-correction.yml",
   "governance-proposal.yml",
-];
+] as const;
+
+function issueFormHref(template: string, title?: string) {
+  const params = new URLSearchParams({ template });
+  if (title) params.set("title", title);
+  return `${repositoryUrl}/issues/new?${params.toString()}`;
+}
+
 export function contributionHref(index: number) {
-  return repositoryUrl
-    ? `${repositoryUrl}/issues/new?template=${issueTemplates[index]}`
-    : "/toolkit/contribution-guide.md";
+  const template = issueTemplates[index];
+  if (!template) throw new RangeError(`Unknown contribution type: ${index}`);
+  return issueFormHref(template);
+}
+
+export function challengeContributionHref(challengeId: string) {
+  if (!/^CH-\d{3}$/.test(challengeId))
+    throw new Error(`Invalid challenge ID: ${challengeId}`);
+  return issueFormHref(
+    "challenge-proposal.yml",
+    `[Challenge proposal] ${challengeId}: `,
+  );
 }

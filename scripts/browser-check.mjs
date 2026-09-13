@@ -2,6 +2,15 @@ import { chromium } from "playwright";
 import assert from "node:assert/strict";
 import { mkdir } from "node:fs/promises";
 const base = process.env.TEST_BASE_URL || "http://localhost:3100";
+const repository = "https://github.com/Roman69066/ocean-plastic-mining";
+function assertIssueHref(href, template, challengeId) {
+  const url = new URL(href);
+  assert.equal(url.origin + url.pathname, `${repository}/issues/new`);
+  assert.equal(url.searchParams.get("template"), template);
+  if (challengeId)
+    assert.ok(url.searchParams.get("title")?.includes(challengeId));
+  assert.doesNotMatch(href, /raw\.githubusercontent|\/blob\/|\/toolkit\//i);
+}
 const browser = await chromium.launch({
   channel: process.env.PLAYWRIGHT_CHANNEL || undefined,
   headless: true,
@@ -25,6 +34,50 @@ try {
     fullPage: true,
   });
   assert.match(await page.locator("h1").innerText(), /10× cheaper/);
+  assert.ok(await page.locator(`a[href="${repository}"]`).count());
+  await page.goto(base + "/en/contribute/");
+  assert.equal(
+    await page.getByText(/public GitHub repository is not connected/i).count(),
+    0,
+  );
+  const contributionLinks = await page
+    .locator(".contribution-grid a")
+    .evaluateAll((links) => links.map((link) => link.href));
+  assert.equal(contributionLinks.length, 7);
+  const contributionTemplates = [
+    "data-correction.yml",
+    "evidence-submission.yml",
+    "challenge-proposal.yml",
+    "rfc-proposal.yml",
+    "solution-proposal.yml",
+    "translation-correction.yml",
+    "governance-proposal.yml",
+  ];
+  contributionLinks.forEach((href, index) =>
+    assertIssueHref(href, contributionTemplates[index]),
+  );
+  for (let index = 1; index <= 10; index += 1) {
+    const id = `CH-${String(index).padStart(3, "0")}`;
+    await page.goto(`${base}/en/challenges/${id}/`);
+    const href = await page
+      .locator(".challenge-aside .button.primary")
+      .getAttribute("href");
+    assert.ok(href, `${id} contribution link`);
+    assertIssueHref(href, "challenge-proposal.yml", id);
+  }
+  await page.goto(base + "/en/solutions/");
+  const solutionLinks = await page
+    .locator(".solution-card a")
+    .evaluateAll((links) => links.map((link) => link.href));
+  assert.ok(solutionLinks.length);
+  solutionLinks.forEach((href) =>
+    assertIssueHref(href, "solution-proposal.yml"),
+  );
+  await page.goto(base + "/en/methodology/");
+  assert.equal(
+    await page.locator(".page-end .button").getAttribute("href"),
+    `${repository}/issues/new/choose`,
+  );
   await page.goto(base + "/en/challenges/CH-007/?check=1#main");
   await page
     .getByRole("combobox", { name: "Language", exact: true })
@@ -110,7 +163,7 @@ try {
   const filtered = errors.filter((e) => !e.includes("favicon.ico"));
   assert.deepEqual(filtered, [], "Browser console/page errors");
   console.log(
-    "PASS: desktop + 390px mobile, 7 languages × 4 layouts, challenge search, retained language path/query/hash, calculator validation, persisted language, mobile navigation, keyboard skip link, stats and console checks.",
+    "PASS: desktop + 390px mobile, canonical GitHub and seven contribution workflows, CH-001–CH-010 submission links, 7 languages × 4 layouts, challenge search, retained language path/query/hash, calculator validation, persisted language, mobile navigation, keyboard skip link, stats and console checks.",
   );
 } finally {
   await browser.close();
