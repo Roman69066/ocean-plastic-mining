@@ -46,8 +46,8 @@ README, CONTRIBUTING, GOVERNANCE, CODE_OF_CONDUCT, SECURITY, ROADMAP, Apache-2.0
 
 ## Remaining limits
 
-- No public GitHub repository connected or pushed: the existing machine GitHub CLI credential was invalid. This new project is independent of the unrelated OneThought parent.
-- No Vercel production deployment or real domain configured. Localhost SEO origins must be replaced through NEXT_PUBLIC_SITE_URL before launch.
+- The public source repository is available at <https://github.com/Roman69066/ocean-plastic-mining>. `main` is the default stable branch, with `codex/v1-open-engineering` retained for engineering work.
+- Vercel production deployment and a real domain remain intentionally deferred. Localhost SEO origins must be replaced through NEXT_PUBLIC_SITE_URL before launch.
 - No real visitor database configured, and no first public launch date claimed.
 - No human language review, confirmed ocean engineering results or approved safety checklist claimed.
 - Lighthouse score and full WCAG conformance audit were not run; no score is fabricated. Keyboard, language, layout and visible-state checks were performed.

@@ -98,11 +98,11 @@ try {
     fullPage: true,
   });
   await page.locator(".mobile-nav summary").click();
-  await page
+  const evidenceLink = page
     .locator(".mobile-nav")
-    .getByRole("link", { name: "证据库", exact: true })
-    .click();
-  assert.ok(page.url().includes("/zh/evidence"));
+    .getByRole("link", { name: "证据库", exact: true });
+  await Promise.all([page.waitForURL("**/zh/evidence/"), evidenceLink.click()]);
+  assert.equal(new URL(page.url()).pathname, "/zh/evidence/");
   await page.goto(base + "/en/");
   await page.keyboard.press("Tab");
   await page.keyboard.press("Enter");
