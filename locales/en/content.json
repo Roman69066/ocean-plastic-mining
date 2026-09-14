@@ -5,6 +5,7 @@
   },
   "nav": [
     "Overview",
+    "Project",
     "Thesis",
     "Cost model",
     "Challenges",
@@ -15,7 +16,8 @@
     "Contribute",
     "Methodology",
     "Governance",
-    "About"
+    "About",
+    "Contact"
   ],
   "ui": {
     "project": "Ocean Plastic Mining Project",
@@ -27,7 +29,7 @@
     "skip": "Skip to content",
     "open": "Open",
     "all": "View all challenges",
-    "explore": "Explore the challenges",
+    "explore": "View 10 open questions",
     "model": "View the cost model",
     "github": "Contribute on GitHub",
     "updated": "Updated",
@@ -93,9 +95,53 @@
   },
   "home": {
     "eyebrow": "AN OPEN ENGINEERING QUESTION",
-    "title": "Can we make ocean cleanup",
-    "emphasis": "10× cheaper?",
-    "subtitle": "Reduce the cost of permanent plastic removal until many independent teams can take part. Start with an inspectable model, not a promise.",
+    "title": "Can we lower the cost of offshore plastic cleanup enough",
+    "emphasis": "for markets to participate?",
+    "subtitle": "Ocean Plastic Mining Project is an open industrial-feasibility experiment. We treat offshore plastic as a dispersed, dynamic, low-grade artificial resource deposit and openly study the full cost of finding, collecting, transporting, processing and recovering it.",
+    "answer": "We have not proven this works. We have not proven it can be commercialized. Our task is to find out.",
+    "understand": "Understand the project",
+    "challengeAssumptions": "Challenge our assumptions",
+    "costLogic": "The hypothesis is a sequence of cost thresholds.",
+    "stages": [
+      [
+        "TODAY",
+        "Cleanup cost ≫ resource value",
+        "The economic gap is still unknown and may be very large."
+      ],
+      [
+        "T1",
+        "Resource value + realizable public payments ≥ full operating cost",
+        "Companies may emerge."
+      ],
+      [
+        "T2",
+        "Resource value ≥ full operating cost",
+        "An industry may emerge."
+      ],
+      [
+        "T3",
+        "Only if a sustained offshore industry develops",
+        "Permanent offshore communities may become economically worth examining."
+      ]
+    ],
+    "stageArrows": [
+      "Reduce €/t",
+      "Continue reducing €/t",
+      "Requires sustained offshore industry"
+    ],
+    "stageNote": "T1, T2 and T3 are unproven research thresholds. Publication does not mean any threshold has been reached.",
+    "notProven": "We have not proven this works.",
+    "unknownIntro": "These unknowns determine whether the project should advance, change direction or be falsified.",
+    "keyUnknowns": [
+      "Real collectable ocean-plastic density",
+      "Logistics energy floor",
+      "Autonomous collection economics",
+      "Satellite and drone search economics",
+      "Pyrolysis net energy",
+      "Achievable public payments",
+      "Scale economies",
+      "Real LCOCR"
+    ],
     "north": "ONE NORTH STAR",
     "northText": "Cost per tonne permanently removed. Full lifecycle. Inspectable evidence.",
     "milestone": "A cost curve, not a countdown.",
@@ -121,6 +167,69 @@
     "last": "The ocean doesn’t need another promise. It needs a measurable cost curve."
   },
   "pages": {
+    "project": {
+      "title": "What is this project trying to learn?",
+      "intro": "An open industrial-feasibility experiment asking whether the full €/t cost of permanently removing offshore plastic can fall far enough for independent teams to participate. Commercial viability has not been proven.",
+      "principle": "A high-quality falsification is as valuable as supporting evidence.",
+      "sections": [
+        [
+          "1. The question we want to answer",
+          "Can the complete cost per verified tonne permanently removed fall far enough for independent teams, and eventually markets, to participate? This is a research question, not a forecast."
+        ],
+        [
+          "2. What a ‘garbage patch’ actually is",
+          "It is not a solid island. It is a broad, moving and uneven region where plastic concentration changes with currents, weather, depth and time. Total regional mass does not reveal collectable density."
+        ],
+        [
+          "3. From waste to a low-grade artificial deposit",
+          "The mining frame treats plastic as a dispersed, contaminated and heterogeneous artificial deposit. It is an economic and engineering metaphor to expose costs; it is not a claim that the material is profitable."
+        ],
+        [
+          "4. Why the core metric is €/t",
+          "A system must be compared by complete euros per verified dry tonne permanently removed. Collection length, vessel size or publicity cannot replace a lifecycle cost boundary."
+        ],
+        [
+          "5. LCOCR",
+          "Levelized Cost of Ocean Cleanup and Recovery annualizes capital and includes search, energy, logistics, maintenance, processing, disposal and compliance. The method is draft and the real baseline remains unknown."
+        ],
+        [
+          "6. T1 / T2 / T3",
+          "T1 tests whether resource value plus realizable public payments can cover full operating cost. T2 tests whether resource value alone can cover it. T3 is only worth examining if a sustained offshore industry first develops. None has been reached."
+        ],
+        [
+          "7. Why independent, small and modular teams",
+          "We are testing whether smaller replicable systems, standard interfaces and shared logistics may lower entry barriers and reveal comparable costs. Their superiority is a hypothesis, not an established fact."
+        ],
+        [
+          "8. Plastic recovery and energy hypotheses",
+          "Material recovery, fuel production and pyrolysis may or may not improve the balance. Net energy, yield, contamination, emissions, residues, capital and compliant disposal must all be measured."
+        ],
+        [
+          "9. Gate A / B / C",
+          "Gate A asks whether enough plastic can physically be found and collected. Gate B asks whether collection, autonomy, energy and offshore reliability work within defensible boundaries. Gate C asks whether verified LCOCR, resource value and realizable payments can meet a threshold. No gate is passed yet."
+        ],
+        [
+          "10. What We Have NOT Proven",
+          "We have not proven commercial viability, collectable density, autonomous economics, pyrolysis net energy, public-payment levels, scale economies, a real LCOCR, or any T1–T3 outcome."
+        ],
+        [
+          "11. 10 Challenges",
+          "CH-001 through CH-010 turn the central unknowns into bounded questions with comparable metrics. They exist to be tested or falsified, not to imply that solutions already exist."
+        ],
+        [
+          "12. How to participate",
+          "Use GitHub to submit corrections, evidence, calculations, negative results, translations or a bounded engineering proposal. Public discussion keeps claims and revisions traceable."
+        ],
+        [
+          "13. The project’s real milestones",
+          "Progress means reducing important unknowns: a frozen method, energy and logistics baselines, a reproducible LCOCR, verified component tests, field evidence and independent replication. Traffic is not engineering validation."
+        ],
+        [
+          "14. How the whole project can be falsified",
+          "If physical limits, complete costs or repeated evidence show that relevant thresholds cannot be approached, publish that result and change or stop the thesis. Unknown is a valid answer. A high-quality falsification is as valuable as supporting evidence."
+        ]
+      ]
+    },
     "thesis": {
       "title": "The thesis is a question.",
       "intro": "Can automation, standardization, energy recovery and shared logistics reduce full cost enough for independent teams to participate?",
@@ -270,8 +379,32 @@
           "No accounts, payments or cross-site tracking. Language is stored locally. Optional visitor counting stores hashes of random browser IDs and a first-party cookie, not IP addresses or browsing paths. Code: Apache-2.0; original content: CC BY 4.0; third-party licenses remain unchanged."
         ]
       ]
+    },
+    "contact": {
+      "title": "Contact the project",
+      "intro": "Questions, criticism and serious project-related communication are welcome.",
+      "welcome": "You can contact the project about",
+      "initiator": "Project initiator",
+      "sections": [
+        [
+          "Public technical contributions",
+          "Prefer GitHub for public technical work so discussion, evidence and changes remain open and traceable."
+        ],
+        [
+          "Direct communication",
+          "For a serious project-related conversation that does not fit a public issue, contact the project initiator directly."
+        ]
+      ]
     }
   },
+  "contactTopics": [
+    "Questions",
+    "Criticism",
+    "Research collaboration",
+    "Engineering proposals",
+    "Evidence",
+    "Other serious project-related communication"
+  ],
   "labels": {
     "supported": "Supported",
     "uncertain": "Uncertain",
@@ -510,16 +643,15 @@
     }
   },
   "stats": {
-    "title": "Site statistics",
-    "uptime": "Time online",
-    "visitors": "Total visitors",
-    "notLaunched": "Not launched yet",
-    "unconfigured": "Counter not enabled",
-    "unavailable": "Temporarily unavailable",
+    "eyebrow": "PUBLIC EXPERIMENT",
+    "title": "Project vital signs",
+    "publicSince": "Public since",
+    "runningFor": "Running for",
+    "visitors": "Estimated unique browsers",
+    "unavailable": "Not available",
     "loading": "Loading…",
+    "day": "day",
     "days": "days",
-    "hours": "hours",
-    "minutes": "min",
-    "note": "Anonymous browsers, deduplicated by a first-party cookie for up to one year. Clearing cookies or changing devices may count again. Not a count of natural persons. No IP addresses or browsing history stored; DNT/GPC respected."
+    "note": "Anonymous browser-based estimate. This is not a count of verified unique people. Clearing cookies or changing devices may count again. No IP addresses or browsing paths are stored; DNT/GPC is respected."
   }
 }

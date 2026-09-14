@@ -33,8 +33,62 @@ try {
     path: "test-results/home-desktop.png",
     fullPage: true,
   });
-  assert.match(await page.locator("h1").innerText(), /10× cheaper/);
+  assert.match(await page.locator("h1").innerText(), /markets to participate/i);
+  assert.ok(
+    await page
+      .getByText("We have not proven this works.", { exact: false })
+      .count(),
+  );
+  assert.equal(
+    await page
+      .getByRole("link", { name: /Understand the project/ })
+      .first()
+      .getAttribute("href"),
+    "/en/project/",
+  );
+  assert.equal(
+    await page
+      .getByRole("link", { name: /View 10 open questions/ })
+      .first()
+      .getAttribute("href"),
+    "/en/challenges/",
+  );
   assert.ok(await page.locator(`a[href="${repository}"]`).count());
+  await page.goto(base + "/en/project/");
+  const projectText = await page.locator("main").innerText();
+  for (const term of [
+    "LCOCR",
+    "T1",
+    "T2",
+    "T3",
+    "Gate A",
+    "Gate B",
+    "Gate C",
+    "Unknown is a valid answer",
+    "10 Challenges",
+  ])
+    assert.ok(projectText.includes(term), `Project overview: ${term}`);
+  assert.match(projectText, /Commercial viability has not been proven/i);
+  await page.screenshot({
+    path: "test-results/project-desktop.png",
+    fullPage: true,
+  });
+  await page
+    .getByRole("combobox", { name: "Language", exact: true })
+    .selectOption("fr");
+  await page.waitForURL("**/fr/project/");
+  await page.goto(base + "/en/contact/");
+  assert.equal(
+    await page
+      .getByRole("link", { name: "hoot69066@gmail.com" })
+      .getAttribute("href"),
+    "mailto:hoot69066@gmail.com",
+  );
+  assert.ok(await page.locator(`a[href="${repository}"]`).count());
+  await page.screenshot({
+    path: "test-results/contact-desktop.png",
+    fullPage: true,
+  });
   await page.goto(base + "/en/contribute/");
   assert.equal(
     await page.getByText(/public GitHub repository is not connected/i).count(),
@@ -132,9 +186,23 @@ try {
   const stats = await page.locator(".site-stats").innerText();
   assert.ok(!stats.includes("NaN"));
   assert.ok(!stats.includes("undefined"));
+  assert.ok(stats.includes("Public since"));
+  assert.ok(stats.includes("September 13, 2026"));
+  assert.ok(stats.includes("Estimated unique browsers"));
+  await page
+    .getByTestId("visitor-count")
+    .filter({ hasText: "Not available" })
+    .waitFor();
   await page.setViewportSize({ width: 390, height: 844 });
   for (const locale of ["zh", "en", "es", "de", "ja", "it", "fr"]) {
-    for (const route of ["", "cost", "challenges/CH-007", "leaderboard"]) {
+    for (const route of [
+      "",
+      "project",
+      "contact",
+      "cost",
+      "challenges/CH-007",
+      "leaderboard",
+    ]) {
       await page.goto(`${base}/${locale}/${route ? route + "/" : ""}`);
       await page.locator("h1").waitFor();
       assert.ok(
@@ -151,6 +219,18 @@ try {
     fullPage: true,
   });
   await page.locator(".mobile-nav summary").click();
+  assert.ok(
+    await page
+      .locator(".mobile-nav")
+      .getByRole("link", { name: "项目", exact: true })
+      .count(),
+  );
+  assert.ok(
+    await page
+      .locator(".mobile-nav")
+      .getByRole("link", { name: "联系", exact: true })
+      .count(),
+  );
   const evidenceLink = page
     .locator(".mobile-nav")
     .getByRole("link", { name: "证据库", exact: true });
@@ -163,7 +243,7 @@ try {
   const filtered = errors.filter((e) => !e.includes("favicon.ico"));
   assert.deepEqual(filtered, [], "Browser console/page errors");
   console.log(
-    "PASS: desktop + 390px mobile, canonical GitHub and seven contribution workflows, CH-001–CH-010 submission links, 7 languages × 4 layouts, challenge search, retained language path/query/hash, calculator validation, persisted language, mobile navigation, keyboard skip link, stats and console checks.",
+    "PASS: V1.1 homepage understanding, Project and Contact, public vital signs, desktop + 390px mobile, canonical GitHub and seven contribution workflows, CH-001–CH-010 submission links, 7 languages × 6 layouts, challenge search, retained language path/query/hash, calculator validation, persisted language, mobile navigation, keyboard skip link, stats and console checks.",
   );
 } finally {
   await browser.close();

@@ -4,19 +4,11 @@ export type CounterConfig = {
   token?: string;
   namespace?: string;
 };
-export function configuredLaunchDate(
-  value: string | undefined,
-  now = Date.now(),
-): string | null {
-  if (
-    !value ||
-    !/^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:\.\d{3})?Z$/.test(value)
-  )
-    return null;
-  const timestamp = Date.parse(value);
-  return Number.isFinite(timestamp) && timestamp <= now
-    ? new Date(timestamp).toISOString()
-    : null;
+export function defaultCounterNamespace(vercelEnvironment?: string) {
+  if (vercelEnvironment === "production") return "opm-production";
+  if (vercelEnvironment === "preview") return "opm-preview";
+  if (vercelEnvironment === "development") return "opm-development";
+  return "opm-local";
 }
 export function visitorHash(id: string) {
   if (
@@ -38,7 +30,7 @@ export async function countVisitors(
   if (!config.url || !config.token) return null;
   const url = new URL(config.url);
   if (url.protocol !== "https:") throw new Error("Counter requires HTTPS");
-  const namespace = config.namespace || "opm-production";
+  const namespace = config.namespace || "opm-local";
   if (!/^[a-zA-Z0-9:_-]{1,80}$/.test(namespace))
     throw new Error("Invalid counter namespace");
   const key = `${namespace}:visitors`;

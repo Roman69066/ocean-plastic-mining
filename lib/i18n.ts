@@ -26,6 +26,7 @@ export function getDictionary(locale: Locale) {
 }
 export const routes = [
   "",
+  "project",
   "thesis",
   "cost",
   "challenges",
@@ -37,8 +38,12 @@ export const routes = [
   "methodology",
   "governance",
   "about",
+  "contact",
 ] as const;
 export type PageKey = Exclude<(typeof routes)[number], "">;
+export function routeLabel(d: Dictionary, path: (typeof routes)[number]) {
+  return d.nav[routes.indexOf(path)];
+}
 export function localHref(locale: Locale, path = "") {
   return `/${locale}/${path ? path.replace(/^\/+|\/+$/g, "") + "/" : ""}`;
 }

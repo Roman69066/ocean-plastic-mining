@@ -4,6 +4,7 @@ const base = process.env.TEST_BASE_URL || "http://localhost:3100";
 const locales = ["zh", "en", "es", "de", "ja", "it", "fr"];
 const core = [
   "",
+  "project",
   "thesis",
   "cost",
   "challenges",
@@ -15,6 +16,7 @@ const core = [
   "methodology",
   "governance",
   "about",
+  "contact",
 ];
 const challenges = JSON.parse(
   await readFile(new URL("../data/challenges.json", import.meta.url)),
@@ -67,7 +69,9 @@ for (const file of [
 for (const path of ["/favicon.svg", "/robots.txt", "/sitemap.xml"])
   assert.equal((await fetch(base + path)).status, 200, path);
 const sitemap = await (await fetch(base + "/sitemap.xml")).text();
-assert.equal((sitemap.match(/<loc>/g) || []).length, 154);
+const expectedLocalizedRoutes =
+  locales.length * (core.length + challenges.length);
+assert.equal((sitemap.match(/<loc>/g) || []).length, expectedLocalizedRoutes);
 const stats = await fetch(base + "/api/site-stats/");
 assert.ok([200, 503].includes(stats.status));
 const payload = await stats.json();

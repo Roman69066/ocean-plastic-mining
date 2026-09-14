@@ -10,6 +10,7 @@ import {
 } from "@/lib/data";
 import {
   localHref,
+  routeLabel,
   type Dictionary,
   type Locale,
   type PageKey,
@@ -18,6 +19,7 @@ import {
   challengeContributionHref,
   contributionHref,
   issueChooserUrl,
+  repositoryUrl,
 } from "@/lib/config";
 import { CostCurve } from "./cost-curve";
 import { CostCalculator } from "./cost-calculator";
@@ -43,6 +45,94 @@ function EvidenceScale({ d }: { d: Dictionary }) {
           <span>{d.labels[level]}</span>
         </div>
       ))}
+    </div>
+  );
+}
+function ProjectOverview({ d, locale }: { d: Dictionary; locale: Locale }) {
+  const sections = d.pages.project.sections;
+  return (
+    <div className="project-overview">
+      {sections.map(([title, body], index) => (
+        <section className={index === 9 ? "not-proven-panel" : ""} key={title}>
+          <span className="mono">{String(index + 1).padStart(2, "0")}</span>
+          <div>
+            <h2>{title}</h2>
+            <p>{body}</p>
+            {index === 5 && (
+              <div className="project-thresholds">
+                {d.home.stages.slice(1).map(([stage, condition, outcome]) => (
+                  <div key={stage}>
+                    <strong className="mono">{stage}</strong>
+                    <span>{condition}</span>
+                    <small>{outcome}</small>
+                  </div>
+                ))}
+              </div>
+            )}
+            {index === 10 && (
+              <ol className="project-challenges">
+                {challenges.map((challenge) => (
+                  <li key={challenge.id}>
+                    <Link
+                      href={localHref(locale, `challenges/${challenge.id}`)}
+                    >
+                      <span className="mono">{challenge.id}</span>
+                      {d.challenges[challenge.id].title}
+                    </Link>
+                  </li>
+                ))}
+              </ol>
+            )}
+          </div>
+        </section>
+      ))}
+      <div className="project-principles">
+        <strong>{d.ui.noData}</strong>
+        <strong>{d.pages.project.principle}</strong>
+      </div>
+    </div>
+  );
+}
+function ContactPage({ d }: { d: Dictionary }) {
+  return (
+    <div className="contact-panel">
+      <section>
+        <h2>{d.pages.contact.welcome}</h2>
+        <ul>
+          {d.contactTopics.map((topic) => (
+            <li key={topic}>{topic}</li>
+          ))}
+        </ul>
+      </section>
+      <section>
+        <h2>{d.pages.contact.sections[0][0]}</h2>
+        <p>{d.pages.contact.sections[0][1]}</p>
+        <a className="button" href={`${repositoryUrl}/issues/new/choose`}>
+          GitHub Issues ↗
+        </a>
+      </section>
+      <section className="contact-direct">
+        <h2>{d.pages.contact.sections[1][0]}</h2>
+        <p>{d.pages.contact.sections[1][1]}</p>
+        <dl>
+          <div>
+            <dt>{d.pages.contact.initiator}</dt>
+            <dd>Roman</dd>
+          </div>
+          <div>
+            <dt>Email</dt>
+            <dd>
+              <a href="mailto:hoot69066@gmail.com">hoot69066@gmail.com</a>
+            </dd>
+          </div>
+          <div>
+            <dt>GitHub</dt>
+            <dd>
+              <a href={repositoryUrl}>Roman69066/ocean-plastic-mining ↗</a>
+            </dd>
+          </div>
+        </dl>
+      </section>
     </div>
   );
 }
@@ -202,7 +292,7 @@ export function ContentPage({
                         className="text-link"
                         href={localHref(locale, "methodology")}
                       >
-                        {d.nav[9]} ↗
+                        {routeLabel(d, "methodology")} ↗
                       </Link>
                     </td>
                   </tr>
@@ -261,6 +351,8 @@ export function ContentPage({
           </section>
         </>
       )}
+      {page === "project" && <ProjectOverview d={d} locale={locale} />}
+      {page === "contact" && <ContactPage d={d} />}
       {page === "methodology" && (
         <>
           <EvidenceScale d={d} />
@@ -287,7 +379,9 @@ export function ContentPage({
           </a>
         </>
       )}
-      {"sections" in text && <ProseSections sections={text.sections} />}
+      {"sections" in text && !["project", "contact"].includes(page) && (
+        <ProseSections sections={text.sections} />
+      )}
       {page === "governance" && (
         <div className="reference-panel">
           {[

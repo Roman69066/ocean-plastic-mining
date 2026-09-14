@@ -5,6 +5,7 @@
   },
   "nav": [
     "Überblick",
+    "Projekt",
     "These",
     "Kostenmodell",
     "Challenges",
@@ -15,7 +16,8 @@
     "Mitwirken",
     "Methodik",
     "Governance",
-    "Über das Projekt"
+    "Über das Projekt",
+    "Kontakt"
   ],
   "ui": {
     "project": "Projekt zur Gewinnung von Meeresplastik",
@@ -27,7 +29,7 @@
     "skip": "Zum Inhalt springen",
     "open": "Offen",
     "all": "Alle Challenges ansehen",
-    "explore": "Challenges erkunden",
+    "explore": "10 offene Fragen ansehen",
     "model": "Kostenmodell ansehen",
     "github": "Auf GitHub beitragen",
     "updated": "Aktualisiert",
@@ -93,9 +95,24 @@
   },
   "home": {
     "eyebrow": "EINE OFFENE TECHNISCHE FRAGE",
-    "title": "Können wir die Meeresreinigung",
-    "emphasis": "10× günstiger machen?",
-    "subtitle": "Die Kosten dauerhafter Entfernung so weit senken, dass viele unabhängige Teams mitwirken können. Ausgangspunkt ist ein prüfbares Modell.",
+    "title": "Können wir die Kosten der Kunststoffreinigung auf hoher See weit genug senken",
+    "emphasis": "damit Märkte teilnehmen?",
+    "subtitle": "Das Ocean Plastic Mining Project ist ein offenes Experiment zur industriellen Machbarkeit. Wir betrachten Meereskunststoff als verstreute, dynamische, geringhaltige künstliche Lagerstätte und untersuchen öffentlich die Gesamtkosten von Suche, Sammlung, Transport, Verarbeitung und Verwertung.",
+    "answer": "Wir haben weder bewiesen, dass dies funktioniert, noch dass es kommerzialisierbar ist. Unsere Aufgabe ist, es herauszufinden.",
+    "understand": "Projekt verstehen",
+    "challengeAssumptions": "Unsere Annahmen prüfen",
+    "costLogic": "Die Hypothese besteht aus einer Folge von Kostenschwellen.",
+    "stages": [
+      ["HEUTE", "Reinigungskosten ≫ Ressourcenwert", "Die wirtschaftliche Lücke ist unbekannt und möglicherweise sehr groß."],
+      ["T1", "Ressourcenwert + realisierbare öffentliche Zahlungen ≥ volle Betriebskosten", "Unternehmen könnten entstehen."],
+      ["T2", "Ressourcenwert ≥ volle Betriebskosten", "Eine Industrie könnte entstehen."],
+      ["T3", "Nur wenn eine dauerhafte Offshore-Industrie entsteht", "Dauerhafte Offshore-Gemeinschaften könnten wirtschaftlich untersuchenswert werden."]
+    ],
+    "stageArrows": ["€/t senken", "€/t weiter senken", "Erfordert dauerhafte Offshore-Industrie"],
+    "stageNote": "T1, T2 und T3 sind unbewiesene Forschungsschwellen. Die Veröffentlichung bedeutet nicht, dass eine davon erreicht ist.",
+    "notProven": "Wir haben nicht bewiesen, dass dies funktioniert.",
+    "unknownIntro": "Diese Unbekannten entscheiden, ob das Projekt fortgeführt, geändert oder widerlegt werden sollte.",
+    "keyUnknowns": ["Tatsächlich sammelbare Meereskunststoffdichte", "Energetische Untergrenze der Logistik", "Wirtschaftlichkeit autonomer Sammlung", "Wirtschaftlichkeit der Satelliten- und Drohnensuche", "Nettoenergie der Pyrolyse", "Erreichbare öffentliche Zahlungen", "Skaleneffekte", "Realer LCOCR"],
     "north": "EINE ZENTRALE KENNZAHL",
     "northText": "Kosten je dauerhaft entfernter Tonne. Gesamter Lebenszyklus. Prüfbare Evidenz.",
     "milestone": "Eine Kostenkurve ohne Countdown.",
@@ -121,6 +138,27 @@
     "last": "Der Ozean braucht kein weiteres Versprechen. Er braucht eine messbare Kostenkurve."
   },
   "pages": {
+    "project": {
+      "title": "Was will dieses Projekt herausfinden?",
+      "intro": "Ein offenes Experiment zur industriellen Machbarkeit: Können die vollständigen €/t-Kosten dauerhafter Entfernung so weit fallen, dass unabhängige Teams teilnehmen? Kommerzielle Tragfähigkeit ist nicht bewiesen.",
+      "principle": "Eine hochwertige Widerlegung ist ebenso wertvoll wie stützende Evidenz.",
+      "sections": [
+        ["1. Die Frage", "Können die vollständigen Kosten je verifizierter, dauerhaft entfernter Tonne weit genug sinken, damit unabhängige Teams und vielleicht Märkte teilnehmen? Das ist eine Forschungsfrage, keine Prognose."],
+        ["2. Was ein Müllstrudel tatsächlich ist", "Er ist keine feste Insel, sondern eine große, bewegliche und ungleichmäßige Region. Konzentrationen ändern sich mit Strömung, Wetter, Tiefe und Zeit; Gesamtmasse ersetzt keine sammelbare Dichte."],
+        ["3. Vom Abfall zur geringhaltigen künstlichen Lagerstätte", "Der Bergbau-Rahmen macht Kosten sichtbar, indem er Kunststoff als verstreute, verschmutzte und heterogene künstliche Lagerstätte behandelt. Er ist eine Metapher, keine Rentabilitätsbehauptung."],
+        ["4. Warum €/t die Kernmetrik ist", "Systeme werden anhand vollständiger Euro je verifizierter trockener und dauerhaft entfernter Tonne verglichen. Schiffsgröße, Kollektorlänge oder Aufmerksamkeit ersetzen keine Lebenszykluskosten."],
+        ["5. LCOCR", "Die nivellierten Kosten für Meeresreinigung und -verwertung annualisieren Kapital und umfassen Suche, Energie, Logistik, Wartung, Verarbeitung, Entsorgung und Compliance. Methode und reale Basis sind noch unbestätigt."],
+        ["6. T1 / T2 / T3", "T1 prüft Ressourcenwert plus realisierbare öffentliche Zahlungen gegen volle Betriebskosten. T2 prüft Ressourcenwert allein. T3 wird nur untersucht, falls zuerst eine dauerhafte Offshore-Industrie entsteht. Keine Schwelle ist erreicht."],
+        ["7. Warum unabhängige, kleine, modulare Teams", "Wir prüfen, ob replizierbare kleine Systeme, Standardschnittstellen und geteilte Logistik Eintrittshürden senken und vergleichbare Kosten erzeugen könnten. Ein Vorteil ist nur eine Hypothese."],
+        ["8. Verwertungs- und Energiehypothesen", "Materialverwertung, Kraftstoff und Pyrolyse können die Bilanz verbessern oder auch nicht. Nettoenergie, Ausbeute, Verschmutzung, Emissionen, Rückstände, Kapital und regelkonforme Entsorgung müssen gemessen werden."],
+        ["9. Gate A / B / C", "Gate A fragt, ob genug Kunststoff gefunden und gesammelt werden kann. Gate B prüft Sammlung, Autonomie, Energie und Zuverlässigkeit. Gate C prüft LCOCR, Wert und realisierbare Zahlungen. Kein Gate ist bestanden."],
+        ["10. Was wir NICHT bewiesen haben", "Nicht bewiesen sind kommerzielle Tragfähigkeit, sammelbare Dichte, autonome Wirtschaftlichkeit, Pyrolyse-Nettoenergie, öffentliche Zahlungen, Skaleneffekte, realer LCOCR und T1–T3."],
+        ["11. 10 Challenges", "CH-001 bis CH-010 machen zentrale Unbekannte zu begrenzten, vergleichbaren Fragen. Sie sollen geprüft oder widerlegt werden und behaupten keine vorhandenen Lösungen."],
+        ["12. Mitwirken", "Über GitHub können Korrekturen, Evidenz, Berechnungen, negative Ergebnisse, Übersetzungen und begrenzte technische Vorschläge eingereicht werden. Öffentliche Diskussion bleibt nachvollziehbar."],
+        ["13. Die echten Meilensteine", "Fortschritt bedeutet weniger Unbekannte: feste Methode, Energie- und Logistikbasis, reproduzierbarer LCOCR, verifizierte Tests, Felddaten und unabhängige Replikation. Zugriffe sind keine technische Validierung."],
+        ["14. Wie das gesamte Projekt widerlegt werden kann", "Zeigen physikalische Grenzen, Gesamtkosten oder wiederholte Evidenz, dass Schwellen nicht erreichbar sind, muss das veröffentlicht und die These geändert oder beendet werden. Unbekannt ist eine gültige Antwort; gute Widerlegung ist ebenso wertvoll wie Unterstützung."]
+      ]
+    },
     "thesis": {
       "title": "Die These ist eine Frage.",
       "intro": "Können Automatisierung, Standardisierung, Energierückgewinnung und gemeinsame Logistik die Vollkosten ausreichend senken?",
@@ -270,8 +308,19 @@
           "Keine Konten, Zahlungen oder seitenübergreifende Verfolgung. Sprache lokal gespeichert. Optionaler Besucherzähler speichert Hashes zufälliger Browser-IDs und eigene Cookies, keine IPs oder Pfade. Code Apache-2.0; eigene Inhalte CC BY 4.0; fremde Lizenzen bleiben bestehen."
         ]
       ]
+    },
+    "contact": {
+      "title": "Projekt kontaktieren",
+      "intro": "Fragen, Kritik und ernsthafte projektbezogene Kommunikation sind willkommen.",
+      "welcome": "Kontakt ist willkommen zu",
+      "initiator": "Projektinitiator",
+      "sections": [
+        ["Öffentliche technische Beiträge", "Für öffentliche technische Arbeit bitte GitHub bevorzugen, damit Diskussion, Evidenz und Änderungen offen und nachvollziehbar bleiben."],
+        ["Direkter Kontakt", "Für ernsthafte Gespräche, die nicht in ein öffentliches Issue gehören, kann der Initiator direkt kontaktiert werden."]
+      ]
     }
   },
+  "contactTopics": ["Fragen", "Kritik", "Forschungszusammenarbeit", "Technische Vorschläge", "Evidenz", "Andere ernsthafte projektbezogene Kommunikation"],
   "labels": {
     "supported": "Gestützt",
     "uncertain": "Ungewiss",
@@ -510,16 +559,15 @@
     }
   },
   "stats": {
-    "title": "Websitestatistik",
-    "uptime": "Zeit online",
-    "visitors": "Besucher insgesamt",
-    "notLaunched": "Noch nicht veröffentlicht",
-    "unconfigured": "Zähler nicht aktiviert",
-    "unavailable": "Vorübergehend nicht verfügbar",
+    "eyebrow": "ÖFFENTLICHES EXPERIMENT",
+    "title": "Projektstatus",
+    "publicSince": "Öffentlich seit",
+    "runningFor": "Läuft seit",
+    "visitors": "Geschätzte eindeutige Browser",
+    "unavailable": "Nicht verfügbar",
     "loading": "Wird geladen…",
+    "day": "Tag",
     "days": "Tage",
-    "hours": "Stunden",
-    "minutes": "Min.",
-    "note": "Anonyme Browser werden mit einem eigenen Cookie bis zu einem Jahr dedupliziert. Gelöschte Cookies oder andere Geräte können erneut zählen. Keine Anzahl natürlicher Personen. Keine IP oder Verlaufsspeicherung; DNT/GPC wird beachtet."
+    "note": "Anonyme browserbasierte Schätzung, keine Zahl verifizierter eindeutiger Personen. Gelöschte Cookies oder andere Geräte können erneut zählen. IP-Adressen und Seitenpfade werden nicht gespeichert; DNT/GPC wird beachtet."
   }
 }

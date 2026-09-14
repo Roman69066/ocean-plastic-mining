@@ -1,9 +1,12 @@
 "use client";
 import { useEffect, useState } from "react";
-import { uptimeParts } from "@/lib/uptime";
+import {
+  localizedPublicLaunchDate,
+  PUBLIC_LAUNCH_DATE,
+  runningDays,
+} from "@/lib/uptime";
 import type { Dictionary, Locale } from "@/lib/i18n";
 type Stats = {
-  launchedAt: string | null;
   visitors: number | null;
   counterStatus: string;
 };
@@ -27,17 +30,14 @@ export function SiteStats({ d, locale }: { d: Dictionary; locale: Locale }) {
   const [now, setNow] = useState<number | null>(null);
   useEffect(() => {
     let active = true;
+    const initialTimer = window.setTimeout(() => setNow(Date.now()), 0);
     getStats()
       .then((data) => {
-        if (active) {
-          setStats(data);
-          setNow(Date.now());
-        }
+        if (active) setStats(data);
       })
       .catch(() => {
         if (active)
           setStats({
-            launchedAt: null,
             visitors: null,
             counterStatus: "unavailable",
           });
@@ -45,40 +45,46 @@ export function SiteStats({ d, locale }: { d: Dictionary; locale: Locale }) {
     const timer = setInterval(() => setNow(Date.now()), 60000);
     return () => {
       active = false;
+      clearTimeout(initialTimer);
       clearInterval(timer);
     };
   }, []);
   const t = d.stats;
-  const parts =
-    stats?.launchedAt && now !== null
-      ? uptimeParts(stats.launchedAt, now)
-      : null;
+  const days = now === null ? null : runningDays(now);
   const format = new Intl.NumberFormat(locale);
   return (
     <section className="site-stats" aria-label={t.title}>
-      <div>
-        <span>{t.uptime}</span>
-        <strong>
-          {parts
-            ? `${format.format(parts.days)} ${t.days} ${parts.hours} ${t.hours} ${parts.minutes} ${t.minutes}`
-            : stats
-              ? t.notLaunched
-              : t.loading}
-        </strong>
-      </div>
-      <div>
-        <span>{t.visitors}</span>
-        <strong data-testid="visitor-count">
-          {stats?.visitors !== null && stats?.visitors !== undefined
-            ? format.format(stats.visitors)
-            : stats?.counterStatus === "unavailable"
-              ? t.unavailable
+      <p className="eyebrow">{t.eyebrow}</p>
+      <h2>{t.title}</h2>
+      <div className="vital-signs-grid">
+        <div>
+          <span>{t.publicSince}</span>
+          <strong>
+            <time dateTime={PUBLIC_LAUNCH_DATE}>
+              {localizedPublicLaunchDate(locale)}
+            </time>
+          </strong>
+        </div>
+        <div>
+          <span>{t.runningFor}</span>
+          <strong>
+            {days === null
+              ? t.loading
+              : `${format.format(days)} ${days === 1 ? t.day : t.days}`}
+          </strong>
+        </div>
+        <div>
+          <span>{t.visitors}</span>
+          <strong data-testid="visitor-count">
+            {stats?.visitors !== null && stats?.visitors !== undefined
+              ? format.format(stats.visitors)
               : stats
-                ? t.unconfigured
+                ? t.unavailable
                 : t.loading}
-        </strong>
+          </strong>
+        </div>
       </div>
-      <p>{t.note}</p>
+      <p className="stats-note">{t.note}</p>
     </section>
   );
 }

@@ -1,10 +1,11 @@
 import { NextRequest, NextResponse } from "next/server";
 import { randomUUID } from "node:crypto";
 import {
-  configuredLaunchDate,
   countVisitors,
+  defaultCounterNamespace,
   visitorHash,
 } from "@/lib/site-stats";
+import { PUBLIC_LAUNCH_DATE } from "@/lib/uptime";
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
 const cookieName = "opm-visitor";
@@ -12,7 +13,9 @@ function config() {
   return {
     url: process.env.COUNTER_REDIS_REST_URL,
     token: process.env.COUNTER_REDIS_REST_TOKEN,
-    namespace: process.env.COUNTER_NAMESPACE,
+    namespace:
+      process.env.COUNTER_NAMESPACE ||
+      defaultCounterNamespace(process.env.VERCEL_ENV),
   };
 }
 function reply(body: object, status = 200) {
@@ -25,9 +28,6 @@ function reply(body: object, status = 200) {
   });
 }
 async function handle(request: NextRequest, count: boolean) {
-  const launchedAt = configuredLaunchDate(
-    process.env.NEXT_PUBLIC_SITE_LAUNCHED_AT,
-  );
   const privacyOptOut =
     request.headers.get("Sec-GPC") === "1" ||
     request.headers.get("DNT") === "1";
@@ -47,7 +47,7 @@ async function handle(request: NextRequest, count: boolean) {
       count && !privacyOptOut ? id : undefined,
     );
     const response = reply({
-      launchedAt,
+      launchedAt: PUBLIC_LAUNCH_DATE,
       visitors,
       counterStatus: visitors === null ? "unconfigured" : "active",
       metric: "unique-anonymous-browsers",
@@ -65,7 +65,7 @@ async function handle(request: NextRequest, count: boolean) {
   } catch {
     return reply(
       {
-        launchedAt,
+        launchedAt: PUBLIC_LAUNCH_DATE,
         visitors: null,
         counterStatus: "unavailable",
         metric: "unique-anonymous-browsers",

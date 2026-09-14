@@ -5,6 +5,7 @@
   },
   "nav": [
     "Vue d’ensemble",
+    "Projet",
     "Thèse",
     "Modèle de coûts",
     "Défis",
@@ -15,7 +16,8 @@
     "Contribuer",
     "Méthodologie",
     "Gouvernance",
-    "À propos"
+    "À propos",
+    "Contact"
   ],
   "ui": {
     "project": "Projet d’Extraction du Plastique Océanique",
@@ -27,7 +29,7 @@
     "skip": "Aller au contenu",
     "open": "Ouvert",
     "all": "Voir tous les défis",
-    "explore": "Explorer les défis",
+    "explore": "Voir les 10 questions ouvertes",
     "model": "Voir le modèle de coûts",
     "github": "Contribuer sur GitHub",
     "updated": "Mis à jour",
@@ -93,9 +95,24 @@
   },
   "home": {
     "eyebrow": "UNE QUESTION D’INGÉNIERIE OUVERTE",
-    "title": "Pouvons-nous rendre le nettoyage océanique",
-    "emphasis": "10 fois moins cher ?",
-    "subtitle": "Réduire le coût du retrait définitif pour permettre à de nombreuses équipes indépendantes de participer. Commencer par un modèle vérifiable.",
+    "title": "Pouvons-nous assez réduire le coût du nettoyage du plastique au large",
+    "emphasis": "pour que des marchés participent ?",
+    "subtitle": "Ocean Plastic Mining Project est une expérience ouverte de faisabilité industrielle. Nous considérons le plastique marin comme un gisement artificiel dispersé, dynamique et à faible teneur, et étudions publiquement le coût complet de sa recherche, collecte, transport, traitement et valorisation.",
+    "answer": "Nous n’avons prouvé ni que cela fonctionne, ni que cela peut être commercialisé. Notre tâche est de le découvrir.",
+    "understand": "Comprendre le projet",
+    "challengeAssumptions": "Contester nos hypothèses",
+    "costLogic": "L’hypothèse est une suite de seuils de coûts.",
+    "stages": [
+      ["AUJOURD’HUI", "Coût du nettoyage ≫ valeur de la ressource", "L’écart économique reste inconnu et peut être très grand."],
+      ["T1", "Valeur de la ressource + paiements publics réalisables ≥ coût d’exploitation complet", "Des entreprises pourraient apparaître."],
+      ["T2", "Valeur de la ressource ≥ coût d’exploitation complet", "Une industrie pourrait apparaître."],
+      ["T3", "Seulement si une industrie offshore durable se développe", "Des communautés offshore permanentes pourraient mériter un examen économique."]
+    ],
+    "stageArrows": ["Réduire €/t", "Continuer à réduire €/t", "Exige une industrie offshore durable"],
+    "stageNote": "T1, T2 et T3 sont des seuils de recherche non prouvés. La publication du projet ne signifie pas qu’ils sont atteints.",
+    "notProven": "Nous n’avons pas prouvé que cela fonctionne.",
+    "unknownIntro": "Ces inconnues déterminent si le projet doit avancer, changer de direction ou être réfuté.",
+    "keyUnknowns": ["Densité réelle de plastique marin collectable", "Plancher énergétique de la logistique", "Économie de la collecte autonome", "Économie de la recherche satellite et drone", "Énergie nette de la pyrolyse", "Paiements publics réalisables", "Économies d’échelle", "LCOCR réel"],
     "north": "UNE MÉTRIQUE DIRECTRICE",
     "northText": "Coût par tonne retirée définitivement. Cycle de vie complet. Preuves vérifiables.",
     "milestone": "Une courbe de coûts, sans compte à rebours.",
@@ -121,6 +138,27 @@
     "last": "L’océan n’a pas besoin d’une nouvelle promesse. Il a besoin d’une courbe de coûts mesurable."
   },
   "pages": {
+    "project": {
+      "title": "Que cherche à apprendre ce projet ?",
+      "intro": "Une expérience ouverte de faisabilité industrielle demandant si le coût complet en €/t du retrait permanent peut assez baisser pour des équipes indépendantes. La viabilité commerciale n’est pas prouvée.",
+      "principle": "Une réfutation de grande qualité vaut autant qu’une preuve favorable.",
+      "sections": [
+        ["1. La question", "Le coût complet par tonne vérifiée et retirée définitivement peut-il assez baisser pour permettre la participation d’équipes indépendantes, voire de marchés ? C’est une question de recherche, pas une prévision."],
+        ["2. Ce qu’est réellement une plaque de déchets", "Ce n’est pas une île solide mais une vaste région mobile et inégale, dont la concentration varie avec les courants, la météo, la profondeur et le temps. La masse totale ne donne pas la densité collectable."],
+        ["3. Du déchet au gisement artificiel à faible teneur", "Le cadre minier rend les coûts visibles en traitant le plastique comme un gisement dispersé, contaminé et hétérogène. C’est une métaphore économique et technique, pas une affirmation de rentabilité."],
+        ["4. Pourquoi la métrique centrale est €/t", "Les systèmes doivent être comparés en euros complets par tonne sèche vérifiée et retirée définitivement. Taille du navire, longueur du collecteur ou attention publique ne remplacent pas le coût de cycle de vie."],
+        ["5. LCOCR", "Le coût actualisé du nettoyage et de la valorisation océaniques annualise le capital et inclut recherche, énergie, logistique, maintenance, traitement, élimination et conformité. La méthode reste un projet et la référence réelle est inconnue."],
+        ["6. T1 / T2 / T3", "T1 teste la valeur plus les paiements publics face au coût d’exploitation complet. T2 teste la valeur seule. T3 ne mérite examen qu’après une industrie offshore durable. Aucun seuil n’est atteint."],
+        ["7. Pourquoi des équipes indépendantes, petites et modulaires", "Nous testons si de petits systèmes réplicables, des interfaces standard et une logistique partagée pourraient réduire les barrières et produire des coûts comparables. Leur supériorité est une hypothèse."],
+        ["8. Hypothèses de valorisation et d’énergie", "Valorisation des matériaux, carburant et pyrolyse peuvent améliorer ou non le bilan. Énergie nette, rendement, contamination, émissions, résidus, capital et élimination conforme doivent être mesurés."],
+        ["9. Gate A / B / C", "Gate A demande si assez de plastique peut être trouvé et collecté. Gate B teste collecte, autonomie, énergie et fiabilité. Gate C teste LCOCR, valeur et paiements réalisables. Aucun Gate n’est franchi."],
+        ["10. Ce que nous n’avons PAS prouvé", "Nous n’avons pas prouvé la viabilité commerciale, la densité collectable, l’économie autonome, l’énergie nette de pyrolyse, les paiements publics, les économies d’échelle, le LCOCR réel ou T1–T3."],
+        ["11. 10 Challenges", "CH-001 à CH-010 transforment les inconnues centrales en questions bornées et comparables. Ils servent à être testés ou réfutés, sans supposer des solutions existantes."],
+        ["12. Participer", "Utilisez GitHub pour corrections, preuves, calculs, résultats négatifs, traductions ou propositions techniques bornées. La discussion publique maintient les affirmations et révisions traçables."],
+        ["13. Les vrais jalons", "Progresser signifie réduire les inconnues : méthode stable, références énergie-logistique, LCOCR reproductible, essais vérifiés, preuves de terrain et réplication indépendante. Le trafic n’est pas une validation technique."],
+        ["14. Comment réfuter tout le projet", "Si les limites physiques, coûts complets ou preuves répétées montrent que les seuils ne peuvent être approchés, il faut le publier et modifier ou arrêter la thèse. Inconnu est une réponse valide ; une bonne réfutation vaut une preuve favorable."]
+      ]
+    },
     "thesis": {
       "title": "La thèse est une question.",
       "intro": "Automatisation, standardisation, récupération d’énergie et logistique partagée peuvent-elles réduire suffisamment le coût complet ?",
@@ -270,8 +308,19 @@
           "Ni comptes, paiements, ni suivi intersites. Langue stockée localement. Le compteur facultatif conserve des hachages d’ID aléatoires et un cookie propriétaire, sans IP ni parcours. Code Apache-2.0 ; contenu original CC BY 4.0 ; licences tierces conservées."
         ]
       ]
+    },
+    "contact": {
+      "title": "Contacter le projet",
+      "intro": "Questions, critiques et communications sérieuses liées au projet sont bienvenues.",
+      "welcome": "Vous pouvez nous contacter pour",
+      "initiator": "Initiateur du projet",
+      "sections": [
+        ["Contributions techniques publiques", "Pour les travaux techniques publics, privilégiez GitHub afin que discussions, preuves et modifications restent ouvertes et traçables."],
+        ["Communication directe", "Pour une conversation sérieuse qui ne convient pas à une issue publique, contactez directement l’initiateur."]
+      ]
     }
   },
+  "contactTopics": ["Questions", "Critiques", "Collaboration de recherche", "Propositions d’ingénierie", "Preuves", "Autres communications sérieuses liées au projet"],
   "labels": {
     "supported": "Étayé",
     "uncertain": "Incertain",
@@ -510,16 +559,15 @@
     }
   },
   "stats": {
-    "title": "Statistiques du site",
-    "uptime": "Durée en ligne",
-    "visitors": "Visiteurs cumulés",
-    "notLaunched": "Pas encore publié",
-    "unconfigured": "Compteur non activé",
-    "unavailable": "Temporairement indisponible",
+    "eyebrow": "EXPÉRIENCE PUBLIQUE",
+    "title": "Signes vitaux du projet",
+    "publicSince": "Public depuis",
+    "runningFor": "En cours depuis",
+    "visitors": "Navigateurs uniques estimés",
+    "unavailable": "Indisponible",
     "loading": "Chargement…",
+    "day": "jour",
     "days": "jours",
-    "hours": "heures",
-    "minutes": "min",
-    "note": "Navigateurs anonymes dédupliqués par cookie propriétaire pendant un an maximum. Effacer les cookies ou changer d’appareil peut compter à nouveau. Ce ne sont pas des personnes physiques. Ni IP ni historique stockés ; DNT/GPC respectés."
+    "note": "Estimation anonyme fondée sur les navigateurs, pas un nombre de personnes uniques vérifiées. Effacer les cookies ou changer d’appareil peut recompter. Aucune IP ni aucun parcours n’est stocké ; DNT/GPC est respecté."
   }
 }

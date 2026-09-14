@@ -1,7 +1,13 @@
 import { SiteStats } from "./site-stats";
 import Link from "next/link";
 import { LanguageSwitcher } from "./language-switcher";
-import { localHref, routes, type Dictionary, type Locale } from "@/lib/i18n";
+import {
+  localHref,
+  routeLabel,
+  routes,
+  type Dictionary,
+  type Locale,
+} from "@/lib/i18n";
 import { repositoryUrl } from "@/lib/config";
 export function Mark() {
   return (
@@ -37,11 +43,13 @@ export function Header({ d, locale }: { d: Dictionary; locale: Locale }) {
           </span>
         </Link>
         <nav aria-label={d.ui.menu} className="desktop-nav">
-          {[2, 3, 4, 7].map((i) => (
-            <Link key={i} href={localHref(locale, routes[i])}>
-              {d.nav[i]}
-            </Link>
-          ))}
+          {(["project", "cost", "challenges", "evidence"] as const).map(
+            (path) => (
+              <Link key={path} href={localHref(locale, path)}>
+                {routeLabel(d, path)}
+              </Link>
+            ),
+          )}
         </nav>
         <div className="header-tools">
           <LanguageSwitcher locale={locale} label={d.ui.language} />
@@ -49,7 +57,7 @@ export function Header({ d, locale }: { d: Dictionary; locale: Locale }) {
             href={localHref(locale, "contribute")}
             className="header-contribute"
           >
-            {d.nav[8]} <span aria-hidden="true">↗</span>
+            {routeLabel(d, "contribute")} <span aria-hidden="true">↗</span>
           </Link>
         </div>
         <details className="mobile-nav">

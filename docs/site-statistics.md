@@ -4,11 +4,11 @@ Added at the user's request. The content remains statically pre-rendered; only `
 
 ## First launch
 
-Set `NEXT_PUBLIC_SITE_LAUNCHED_AT` to the actual first public launch in UTC, e.g. the ISO timestamp returned at deployment. Do not set a fabricated launch date during local development. Keep it unchanged through redeploys. The client shows days, hours and minutes since that timestamp, updating each minute. This is elapsed time since launch, not monitored availability or an uptime SLA. Unset/invalid/future dates display “Not launched yet”. The visitor count is independent of the launch clock.
+The canonical public launch date is `2026-09-13` in `lib/uptime.ts`. It is permanent project history and does not depend on deployment dates, environment variables, domains or hosting providers. The client calculates completed public days from that date after hydration, so the server and browser do not render conflicting clock values. This is elapsed time since public launch, not monitored availability or an uptime SLA. The visitor count is independent of the launch clock.
 
 ## Durable anonymous counter
 
-Create a dedicated Upstash-compatible Redis REST database, then configure server-only `COUNTER_REDIS_REST_URL` and `COUNTER_REDIS_REST_TOKEN` in Vercel. Set an isolated `COUNTER_NAMESPACE` per environment. Never commit credentials or use `NEXT_PUBLIC_` for them. No database is necessary to build the project; absent configuration returns `unconfigured`, not zero visitors.
+Create a dedicated Upstash-compatible Redis REST database, then configure server-only `COUNTER_REDIS_REST_URL` and `COUNTER_REDIS_REST_TOKEN` in Vercel. `COUNTER_NAMESPACE` may override the key prefix; when omitted, Vercel production, preview and development use isolated defaults. Never commit credentials or use `NEXT_PUBLIC_` for them. No database is necessary to build the project; absent configuration returns `unconfigured`, and the UI displays “Not available” rather than a fabricated zero.
 
 The client sends one same-origin JSON POST per document session. The server creates a random UUID-v4 HttpOnly SameSite=Lax cookie (Secure in production, max age one year). It stores only SHA-256(random ID) in a Redis set. A Lua script atomically adds and counts. Repeat requests for the same cookie do not increase the count. GET only reads. No per-person profile, IP address, user-agent, route, geo or timestamp is stored. DNT=1 or Sec-GPC=1 only reads and does not create cookies.
 

@@ -1,6 +1,11 @@
 import Link from "next/link";
 import { challenges, sources } from "@/lib/data";
-import { localHref, type Dictionary, type Locale } from "@/lib/i18n";
+import {
+  localHref,
+  routeLabel,
+  type Dictionary,
+  type Locale,
+} from "@/lib/i18n";
 import { contributionHref, repositoryUrl } from "@/lib/config";
 import { ChallengeCard } from "./challenge-card";
 import { CostCurve } from "./cost-curve";
@@ -20,16 +25,21 @@ export function Home({ d, locale }: { d: Dictionary; locale: Locale }) {
               <em>{d.home.emphasis}</em>
             </h1>
             <p className="hero-description">{d.home.subtitle}</p>
+            <p className="hero-caveat">{d.home.answer}</p>
             <div className="actions">
               <Link
                 className="button primary"
-                href={localHref(locale, "challenges")}
+                href={localHref(locale, "project")}
               >
+                {d.home.understand}
+                <span aria-hidden="true">↗</span>
+              </Link>
+              <Link className="button" href={localHref(locale, "challenges")}>
                 {d.ui.explore}
                 <span aria-hidden="true">↗</span>
               </Link>
-              <Link className="button" href={localHref(locale, "cost")}>
-                {d.ui.model}
+              <Link className="button" href={localHref(locale, "evidence")}>
+                {d.home.challengeAssumptions}
               </Link>
             </div>
             <a className="subtle-link" href={repositoryUrl}>
@@ -41,9 +51,7 @@ export function Home({ d, locale }: { d: Dictionary; locale: Locale }) {
               <span className="mono">RESEARCH QUESTION / 001</span>
               <span aria-hidden="true">+</span>
             </div>
-            <div className="ten">
-              10<span>×</span>
-            </div>
+            <div className="ten">€/t</div>
             <div className="instrument-bottom">
               <span className="crosshair" aria-hidden="true">
                 ⌖
@@ -62,43 +70,61 @@ export function Home({ d, locale }: { d: Dictionary; locale: Locale }) {
           <span aria-hidden="true">↓</span>
         </div>
       </section>
-      <section className="verified-section">
-        <div>
-          <p className="eyebrow">{d.ui.current}</p>
-          <h2 className="verified-value">
-            {d.ui.notVerified}
-            <span aria-hidden="true">_</span>
-          </h2>
-          <p>{d.ui.unit}</p>
+      <section className="viability-section">
+        <div className="section-heading">
+          <div>
+            <p className="eyebrow">01 / COST LOGIC</p>
+            <h2>{d.home.costLogic}</h2>
+          </div>
+          <Link className="text-link" href={localHref(locale, "project")}>
+            {d.home.understand} ↗
+          </Link>
         </div>
-        <div className="thresholds">
-          <p className="eyebrow">TODAY → T1 → T2</p>
+        <div className="viability-path">
+          {d.home.stages.map(([stage, condition, outcome], index) => (
+            <div className="viability-step-wrap" key={stage}>
+              <article className="viability-step">
+                <span className="mono">{stage}</span>
+                <strong>{condition}</strong>
+                <p>{outcome}</p>
+              </article>
+              {index < d.home.stages.length - 1 && (
+                <div className="viability-arrow" aria-hidden="true">
+                  <span>↓</span>
+                  <small>{d.home.stageArrows[index]}</small>
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
+        <p className="notice">{d.home.stageNote}</p>
+      </section>
+      <section className="section unknown-section">
+        <div className="section-heading">
           <div>
-            <span className="threshold-id">T1</span>
-            <p>
-              <strong>{d.home.t1}</strong>
-              <span>
-                {d.ui.resourceRevenue.split("(")[0]} +{" "}
-                {d.ui.publicPayment.split("(")[0]} ≥ {d.ui.fullCost}
-              </span>
-            </p>
+            <p className="eyebrow">02 / WHAT REMAINS UNKNOWN</p>
+            <h2>{d.home.notProven}</h2>
+            <p>{d.home.unknownIntro}</p>
           </div>
-          <div>
-            <span className="threshold-id">T2</span>
-            <p>
-              <strong>{d.home.t2}</strong>
-              <span>
-                {d.ui.resourceRevenue.split("(")[0]} ≥ {d.ui.fullCost}
-              </span>
-            </p>
-          </div>
-          <Link href={localHref(locale, "methodology")}>{d.nav[9]} ↗</Link>
+        </div>
+        <ul className="unknown-grid">
+          {d.home.keyUnknowns.map((unknown) => (
+            <li key={unknown}>{unknown}</li>
+          ))}
+        </ul>
+        <div className="actions">
+          <Link className="button primary" href={localHref(locale, "project")}>
+            {d.home.understand} ↗
+          </Link>
+          <Link className="button" href={localHref(locale, "challenges")}>
+            {d.ui.explore} ↗
+          </Link>
         </div>
       </section>
       <section className="section">
         <div className="section-heading">
           <div>
-            <p className="eyebrow">02 / REFRAME</p>
+            <p className="eyebrow">03 / REFRAME</p>
             <h2>{d.home.shift}</h2>
           </div>
         </div>
@@ -121,7 +147,7 @@ export function Home({ d, locale }: { d: Dictionary; locale: Locale }) {
       </section>
       <section className="section pioneers">
         <div>
-          <p className="eyebrow">03 / THE COST CURVE</p>
+          <p className="eyebrow">04 / THE COST CURVE</p>
           <h2>{d.home.pioneers}</h2>
           <p>{d.home.pioneersText}</p>
           <a className="text-link" href={sources[0].url}>
@@ -135,7 +161,7 @@ export function Home({ d, locale }: { d: Dictionary; locale: Locale }) {
       <section className="section">
         <div className="section-heading">
           <div>
-            <p className="eyebrow">04 / OPEN CHALLENGES</p>
+            <p className="eyebrow">05 / OPEN CHALLENGES</p>
             <h2>{d.home.challenges}</h2>
             <p>{d.home.challengeText}</p>
           </div>
@@ -152,7 +178,7 @@ export function Home({ d, locale }: { d: Dictionary; locale: Locale }) {
         </div>
       </section>
       <section className="section evidence-principle">
-        <p className="eyebrow">05 / EVIDENCE FIRST</p>
+        <p className="eyebrow">06 / EVIDENCE FIRST</p>
         <div className="principle-grid">
           <h2>{d.home.principle}</h2>
           <div>
@@ -172,13 +198,13 @@ export function Home({ d, locale }: { d: Dictionary; locale: Locale }) {
               )}
             </div>
             <Link className="text-link" href={localHref(locale, "methodology")}>
-              E0 → E6 · {d.nav[9]} ↗
+              E0 → E6 · {routeLabel(d, "methodology")} ↗
             </Link>
           </div>
         </div>
       </section>
       <section className="final-cta">
-        <p className="eyebrow">06 / BUILD IN THE OPEN</p>
+        <p className="eyebrow">07 / BUILD IN THE OPEN</p>
         <h2>
           {d.home.breakTitle}
           <br />

@@ -1,6 +1,6 @@
 # Ocean Plastic Mining Project
 
-**Can we make ocean cleanup 10× cheaper?**
+**Can we lower the full cost of permanently removing ocean plastic far enough for independent teams and markets to participate?**
 
 An open engineering project to reduce the cost of permanently removing ocean plastic.
 
@@ -12,11 +12,12 @@ Build inspectable methods, data, models and challenges so many independent teams
 
 ## Current status
 
-- 12 core pages and 10 challenge detail pages, in seven languages: **154 pre-rendered pages**.
+- 14 core pages and 10 challenge detail pages, in seven languages: **168 localized pre-rendered pages**.
+- First-class Project Overview and Contact pages, plus a homepage that states the research question, cost thresholds and what remains unproven.
 - Editable gross LCOCR calculator, conceptual cost curve, separate operating/full-cost T1 balances and T2 balance.
 - Ten E0 challenges; nine explicitly uncertain assumptions; no fabricated leaderboard entries.
 - Working downloads, issue forms, contribution and governance processes.
-- Optional cumulative uptime and persistent anonymous-browser visitor counter (added at user request).
+- Permanent public launch history and running time from `2026-09-13`, plus an optional persistent estimated-unique-browser counter.
 - Methodology version `0.1-draft`, awaiting RFC-0001 review. No maintainers are invented.
 
 ## Start here
@@ -71,12 +72,13 @@ Import this **independent project directory**, not the unrelated parent reposito
 Optional public configuration (rebuild after changes):
 
 - `NEXT_PUBLIC_SITE_URL`: actual origin; used for canonical, hreflang, sitemap and Open Graph. Defaults to localhost for local development. Set before public deployment.
-- `NEXT_PUBLIC_SITE_LAUNCHED_AT`: actual first public launch in UTC ISO 8601; keep unchanged on redeploy. Leave unset before launch.
+
+The permanent public launch date is `2026-09-13`, stored once in `lib/uptime.ts`. It does not depend on deployment metadata or an environment variable and must remain unchanged across releases, domains and hosting providers.
 
 Optional server-only counter configuration:
 
 - `COUNTER_REDIS_REST_URL`, `COUNTER_REDIS_REST_TOKEN`: credentials for a dedicated Upstash-compatible Redis REST database.
-- `COUNTER_NAMESPACE`: separate production and preview prefixes. Never reuse an unrelated application's credentials or namespace.
+- `COUNTER_NAMESPACE`: optional explicit prefix. When omitted on Vercel, production, preview and development use separate defaults. Never reuse an unrelated application's credentials or namespace.
 
 The API stores a SHA-256 hash of a random first-party cookie ID in a Redis set. `SADD` and `SCARD` execute atomically. The cookie lasts up to one year; new devices, clearing cookies or expiry may count again. This counts unique browser identifiers, **not verified natural persons**. JS-capable bots can inflate the number. No IP, user-agent, path or timestamp-per-visitor is stored. DNT/GPC avoids adding visitors. See [statistics deployment](docs/site-statistics.md).
 

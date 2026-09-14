@@ -5,6 +5,7 @@
   },
   "nav": [
     "Resumen",
+    "Proyecto",
     "Tesis",
     "Modelo de costes",
     "Retos",
@@ -15,7 +16,8 @@
     "Contribuir",
     "Metodología",
     "Gobernanza",
-    "Acerca del proyecto"
+    "Acerca del proyecto",
+    "Contacto"
   ],
   "ui": {
     "project": "Proyecto de Minería de Plástico Oceánico",
@@ -27,7 +29,7 @@
     "skip": "Saltar al contenido",
     "open": "Abierto",
     "all": "Ver todos los retos",
-    "explore": "Explorar los retos",
+    "explore": "Ver las 10 preguntas abiertas",
     "model": "Ver el modelo de costes",
     "github": "Contribuir en GitHub",
     "updated": "Actualizado",
@@ -93,9 +95,24 @@
   },
   "home": {
     "eyebrow": "UNA PREGUNTA DE INGENIERÍA ABIERTA",
-    "title": "¿Podemos hacer que limpiar el océano sea",
-    "emphasis": "10 veces más barato?",
-    "subtitle": "Reducir el coste de la retirada permanente hasta que muchos equipos independientes puedan participar. Empezar con un modelo inspeccionable.",
+    "title": "¿Podemos reducir bastante el coste de limpiar plástico en alta mar",
+    "emphasis": "para que participen los mercados?",
+    "subtitle": "Ocean Plastic Mining Project es un experimento abierto de viabilidad industrial. Tratamos el plástico marino como un depósito artificial disperso, dinámico y de baja ley, y estudiamos públicamente el coste total de encontrarlo, recogerlo, transportarlo, procesarlo y recuperarlo.",
+    "answer": "No hemos demostrado que funcione ni que pueda comercializarse. Nuestra tarea es averiguarlo.",
+    "understand": "Entender el proyecto",
+    "challengeAssumptions": "Cuestionar nuestros supuestos",
+    "costLogic": "La hipótesis es una secuencia de umbrales de coste.",
+    "stages": [
+      ["HOY", "Coste de limpieza ≫ valor del recurso", "La brecha económica sigue siendo desconocida y puede ser muy grande."],
+      ["T1", "Valor del recurso + pagos públicos realizables ≥ coste operativo total", "Podrían surgir empresas."],
+      ["T2", "Valor del recurso ≥ coste operativo total", "Podría surgir una industria."],
+      ["T3", "Solo si se desarrolla una industria estable en alta mar", "Podría merecer la pena estudiar económicamente comunidades permanentes en alta mar."]
+    ],
+    "stageArrows": ["Reducir €/t", "Seguir reduciendo €/t", "Requiere una industria estable en alta mar"],
+    "stageNote": "T1, T2 y T3 son umbrales de investigación no demostrados. Publicar el proyecto no significa haber alcanzado ninguno.",
+    "notProven": "No hemos demostrado que esto funcione.",
+    "unknownIntro": "Estas incógnitas determinan si el proyecto debe avanzar, cambiar de dirección o ser refutado.",
+    "keyUnknowns": ["Densidad real de plástico marino recogible", "Límite energético de la logística", "Economía de la recogida autónoma", "Economía de la búsqueda por satélite y drones", "Energía neta de la pirólisis", "Pagos públicos alcanzables", "Economías de escala", "LCOCR real"],
     "north": "UNA MÉTRICA PRINCIPAL",
     "northText": "Coste por tonelada retirada permanentemente. Ciclo de vida completo. Evidencia inspeccionable.",
     "milestone": "Una curva de costes, sin cuenta atrás.",
@@ -121,6 +138,27 @@
     "last": "El océano no necesita otra promesa. Necesita una curva de costes medible."
   },
   "pages": {
+    "project": {
+      "title": "¿Qué intenta aprender este proyecto?",
+      "intro": "Un experimento abierto de viabilidad industrial que pregunta si el coste total en €/t de retirar permanentemente plástico de alta mar puede bajar lo suficiente para que participen equipos independientes. La viabilidad comercial no está demostrada.",
+      "principle": "Una refutación de alta calidad vale tanto como la evidencia favorable.",
+      "sections": [
+        ["1. La pregunta que queremos responder", "¿Puede bajar el coste completo por tonelada verificada y retirada permanentemente hasta permitir la participación de equipos independientes y, quizá, de mercados? Es una pregunta de investigación, no una previsión."],
+        ["2. Qué es realmente una ‘isla de basura’", "No es una isla sólida. Es una región amplia, móvil y desigual donde la concentración cambia con corrientes, clima, profundidad y tiempo. La masa regional total no indica la densidad recogible."],
+        ["3. De residuo a depósito artificial de baja ley", "El marco minero trata el plástico como un depósito artificial disperso, contaminado y heterogéneo para hacer visibles los costes. Es una metáfora económica y técnica, no una afirmación de rentabilidad."],
+        ["4. Por qué la métrica central es €/t", "Los sistemas deben compararse por euros completos por tonelada seca verificada y retirada permanentemente. El tamaño del buque, la longitud del colector o la publicidad no sustituyen el coste de ciclo de vida."],
+        ["5. LCOCR", "El coste nivelado de limpieza y recuperación oceánica anualiza el capital e incluye búsqueda, energía, logística, mantenimiento, procesamiento, eliminación y cumplimiento. El método es un borrador y la referencia real es desconocida."],
+        ["6. T1 / T2 / T3", "T1 prueba si el valor del recurso y los pagos públicos realizables cubren el coste operativo total. T2 prueba si el valor del recurso basta por sí solo. T3 solo se estudia si antes existe una industria estable en alta mar. Ninguno se ha alcanzado."],
+        ["7. Por qué equipos independientes, pequeños y modulares", "Probamos si sistemas pequeños y replicables, interfaces estándar y logística compartida podrían reducir barreras y producir costes comparables. Su ventaja es una hipótesis, no un hecho."],
+        ["8. Hipótesis de recuperación y energía", "La recuperación de materiales, los combustibles y la pirólisis pueden mejorar o no el balance. Deben medirse energía neta, rendimiento, contaminación, emisiones, residuos, capital y eliminación conforme a normas."],
+        ["9. Gate A / B / C", "Gate A pregunta si puede encontrarse y recogerse suficiente plástico. Gate B evalúa recogida, autonomía, energía y fiabilidad marina. Gate C evalúa si LCOCR verificado, valor y pagos alcanzan un umbral. Ninguna puerta está superada."],
+        ["10. Lo que NO hemos demostrado", "No hemos demostrado viabilidad comercial, densidad recogible, economía autónoma, energía neta de pirólisis, pagos públicos, economías de escala, un LCOCR real ni resultados T1–T3."],
+        ["11. 10 Challenges", "CH-001 a CH-010 convierten las incógnitas centrales en preguntas acotadas y comparables. Existen para ser probadas o refutadas, no porque ya haya soluciones."],
+        ["12. Cómo participar", "Use GitHub para enviar correcciones, evidencia, cálculos, resultados negativos, traducciones o propuestas técnicas acotadas. La discusión pública mantiene trazables las afirmaciones y revisiones."],
+        ["13. Los hitos reales", "Avanzar significa reducir incógnitas: método estable, bases de energía y logística, LCOCR reproducible, pruebas verificadas, evidencia de campo y replicación independiente. El tráfico no valida la ingeniería."],
+        ["14. Cómo refutar todo el proyecto", "Si límites físicos, costes completos o evidencia repetida muestran que no pueden aproximarse los umbrales, hay que publicarlo y cambiar o detener la tesis. Desconocido es una respuesta válida. Una refutación de calidad vale tanto como evidencia favorable."]
+      ]
+    },
     "thesis": {
       "title": "La tesis es una pregunta.",
       "intro": "¿Pueden la automatización, la estandarización, la recuperación energética y la logística compartida reducir el coste completo?",
@@ -270,8 +308,19 @@
           "Sin cuentas, pagos ni rastreo entre sitios. Idioma local. El contador opcional guarda hashes de identificadores aleatorios y cookie propia, sin IP ni rutas. Código Apache-2.0, contenido original CC BY 4.0 y licencias de terceros conservadas."
         ]
       ]
+    },
+    "contact": {
+      "title": "Contactar con el proyecto",
+      "intro": "Son bienvenidas las preguntas, críticas y comunicaciones serias relacionadas con el proyecto.",
+      "welcome": "Puede contactar sobre",
+      "initiator": "Iniciador del proyecto",
+      "sections": [
+        ["Contribuciones técnicas públicas", "Para trabajo técnico público, use preferentemente GitHub para mantener abiertos y trazables el debate, la evidencia y los cambios."],
+        ["Comunicación directa", "Para una conversación seria que no encaje en una incidencia pública, contacte directamente con el iniciador."]
+      ]
     }
   },
+  "contactTopics": ["Preguntas", "Críticas", "Colaboración científica", "Propuestas de ingeniería", "Evidencia", "Otras comunicaciones serias relacionadas con el proyecto"],
   "labels": {
     "supported": "Respaldado",
     "uncertain": "Incierto",
@@ -510,16 +559,15 @@
     }
   },
   "stats": {
-    "title": "Estadísticas del sitio",
-    "uptime": "Tiempo en línea",
-    "visitors": "Visitantes acumulados",
-    "notLaunched": "Aún no publicado",
-    "unconfigured": "Contador no activado",
-    "unavailable": "Temporalmente no disponible",
+    "eyebrow": "EXPERIMENTO PÚBLICO",
+    "title": "Signos vitales del proyecto",
+    "publicSince": "Público desde",
+    "runningFor": "En marcha desde hace",
+    "visitors": "Navegadores únicos estimados",
+    "unavailable": "No disponible",
     "loading": "Cargando…",
+    "day": "día",
     "days": "días",
-    "hours": "horas",
-    "minutes": "min",
-    "note": "Navegadores anónimos deduplicados con cookie propia hasta un año. Borrar cookies o cambiar de dispositivo puede repetir el recuento. No representa personas naturales. Sin IP ni historial; se respeta DNT/GPC."
+    "note": "Estimación anónima basada en navegadores; no cuenta personas únicas verificadas. Borrar cookies o cambiar de dispositivo puede contar de nuevo. No se guardan IP ni rutas de navegación; se respeta DNT/GPC."
   }
 }

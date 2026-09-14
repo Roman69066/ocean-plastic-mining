@@ -16,10 +16,59 @@ test("seven catalogs have complete keys, truthful review state and ten challenge
     const d = read(`locales/${l}/content.json`);
     assert.deepEqual(shape(d), shape(en), l);
     assert.equal(Object.keys(d.challenges).length, 10);
+    assert.equal(d.pages.project.sections.length, 14);
+    assert.equal(d.contactTopics.length, 6);
     assert.deepEqual(d.translation.reviewedBy, []);
     assert.equal(d.translation.lastReviewedDate, null);
     assert.equal(d.translation.status, "community-review-needed");
   }
+});
+test("project overview preserves the V1.1 research and falsification boundaries", () => {
+  const en = read("locales/en/content.json");
+  const zh = read("locales/zh/content.json");
+  const text = JSON.stringify(en.pages.project);
+  for (const term of [
+    "LCOCR",
+    "T1",
+    "T2",
+    "T3",
+    "Gate A",
+    "Gate B",
+    "Gate C",
+    "Unknown is a valid answer",
+    "10 Challenges",
+  ])
+    assert.ok(text.includes(term), term);
+  assert.match(text, /not (?:been )?proven|not proven|NOT Proven/i);
+  assert.ok(
+    text.includes(
+      "A high-quality falsification is as valuable as supporting evidence.",
+    ),
+  );
+  assert.match(JSON.stringify(zh.pages.project), /尚未.*商业|商业.*尚未/);
+});
+test("Project and Contact are first-class routes in all seven languages", () => {
+  const routeSource = readFileSync(
+    new URL("../lib/i18n.ts", import.meta.url),
+    "utf8",
+  );
+  assert.match(routeSource, /"project"/);
+  assert.match(routeSource, /"contact"/);
+  for (const locale of ["zh", "en", "es", "de", "ja", "it", "fr"]) {
+    const d = read(`locales/${locale}/content.json`);
+    assert.ok(d.pages.project.title, locale);
+    assert.ok(d.pages.contact.title, locale);
+  }
+  assert.equal(switchLocalePath("/en/project/", "fr"), "/fr/project/");
+  assert.equal(switchLocalePath("/zh/contact/", "en"), "/en/contact/");
+});
+test("Contact exposes the direct email and canonical public GitHub repository", () => {
+  const source = readFileSync(
+    new URL("../components/content-page.tsx", import.meta.url),
+    "utf8",
+  );
+  assert.ok(source.includes('href="mailto:hoot69066@gmail.com"'));
+  assert.ok(source.includes("repositoryUrl"));
 });
 test("canonical data contains no fabricated verified cost, team or experiment", () => {
   const challenges = read("data/challenges.json");
